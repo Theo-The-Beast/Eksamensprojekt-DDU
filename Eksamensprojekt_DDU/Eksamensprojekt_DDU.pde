@@ -4,7 +4,7 @@ Debug Debug = new Debug();
 Spiller s;
 
 int w = 1258;
-int w2 = -82;
+int w2 = 142;
 
 void setup() {
   size(1600, 900);

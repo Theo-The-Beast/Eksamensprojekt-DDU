@@ -30,13 +30,21 @@ class Spiller {
     if (right) xPos=xPos+10;
     else xPos = xPos + 0;
 
-    if (xPos > 1250)
-    {
+    //Angiver hvornår baggrund skal bevæge sig.
+    if (xPos > 1250) {
       b.baggrundRykker = true;
-      b.personRykker = false; 
+      b.personRykkerHojer = false; 
       xSpeed = 0;
     } else {
-      b.personRykker = true;
+      b.personRykkerHojer = true;
+    }
+    //Angiver hvornår baggrund skal bevæge sig.
+    if (xPos < 150) {
+      b.baggrundRykker = true;
+      b.personRykkerVenstre = false;
+      xSpeed = 0;
+    } else {
+      b.personRykkerVenstre = true;
     }
   }
 
