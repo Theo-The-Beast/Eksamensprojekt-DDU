@@ -26,6 +26,8 @@ void draw() {
   s.tegnSpiller();
   s.bevagSpiller();
   
+  println(b.kirkeX);
+  
   //Debug
   Debug.Debug();
 }

@@ -8,6 +8,9 @@ class Background {
   int xSpeed = -5;
   int stribeX;
 
+  int kirkeX = 50;
+  int speedKirkeX = 0;
+
   void tegnbaggrund() {
     //BLÅ HIMMEL!!!
     for ( int i = 0; i < width; i++) {
@@ -34,6 +37,7 @@ class Background {
         stribeX = stribeX + 0;
       } else {
         stribeX = stribeX + xSpeed;
+        
       }
 
       //Ændre xSpeed når boolean bliver true eller false
@@ -62,7 +66,7 @@ class Background {
       }
     }
         //Ekstra pynt
-    image(pic.skull, 430 + stribeX, 820, 50, 50);
+    /*image(pic.skull, 430 + stribeX, 820, 50, 50);
     image(pic.cloud, 1030 + stribeX, 250);
     image(pic.cloud, 30 + stribeX, 160);
     image(pic.cloud, 1350 + stribeX, 30);
@@ -71,10 +75,27 @@ class Background {
     image(pic.hus, 1030 + stribeX, 350);
     //Hotel
     image(pic.path2, 578 + stribeX, 443);
-    image(pic.hotel, 510 + stribeX, 71);
+    image(pic.hotel, 510 + stribeX, 71);*/
+    
+    if (baggrundRykker) {
+      //Ændre xSpeed når boolean bliver true eller false
+      if (!personRykkerHojer) {
+        kirkeX = kirkeX + xSpeed;
+      }
+      }
+      if (!personRykkerVenstre) {
+        kirkeX = kirkeX - xSpeed;
+      }
     //Kirke
-    image(pic.path3, 145 + stribeX, 413);
-    image(pic.church, 50 + stribeX, 101);
+    if (kirkeX <= -450){
+    kirkeX = width+30;
+    }
+    
+    if (kirkeX >= width+32){
+    kirkeX = -445;
+    }
+    
+    image(pic.path3, kirkeX + 95, 413);
+    image(pic.church, kirkeX, 101);
   }
-
 }
