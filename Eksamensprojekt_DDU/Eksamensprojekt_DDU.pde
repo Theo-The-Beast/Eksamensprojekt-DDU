@@ -1,5 +1,6 @@
-Background b = new Background();
+Background b = new Background(); //<>// //<>//
 Billeder pic = new Billeder();//<>// //<>//
+Debug Debug = new Debug();
 Spiller s;
 
 int w = 1158;
@@ -24,6 +25,9 @@ void draw() {
   //indsæt spilleren
   s.tegnSpiller();
   s.bevagSpiller();
+  
+  //Debug
+  Debug.Debug();
 }
 void keyPressed() {
   s.bevagSpillerPress();
