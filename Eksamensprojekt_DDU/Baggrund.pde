@@ -1,14 +1,5 @@
 class Background {
 
-  PImage skull;  
-  PImage cloud;
-  PImage hus;
-  PImage hotel;
-  PImage church;
-  PImage path;
-  PImage path2;
-  PImage path3;
-
   boolean baggrundRykker = true;
   boolean stregerSetup = true;
   boolean personRykker = true;
@@ -52,18 +43,18 @@ class Background {
     }
 
     //Ekstra pynt
-    image(skull, 430, 820, 50, 50);
-    image(cloud, 1030, 300);
-    image(cloud, 30, 160);
-    image(cloud, 1350, 30);
+    image(pic.skull, 430, 820, 50, 50);
+    image(pic.cloud, 1030, 300);
+    image(pic.cloud, 30, 160);
+    image(pic.cloud, 1350, 30);
     //Hus1
-    image(path, 1020, 473);
-    image(hus, 1030, 350);
+    image(pic.path, 1020, 473);
+    image(pic.hus, 1030, 350);
     //Hus2
-    image(path2, 578, 443);
-    image(hotel, 510, 71);
+    image(pic.path2, 578, 443);
+    image(pic.hotel, 510, 71);
     //Hus
-    image(path3, 145, 413);
-    image(church, 50, 101);
+    image(pic.path3, 145, 413);
+    image(pic.church, 50, 101);
   }
 }

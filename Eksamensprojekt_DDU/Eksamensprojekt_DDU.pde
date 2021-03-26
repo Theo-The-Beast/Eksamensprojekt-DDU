@@ -1,7 +1,6 @@
-Background b = new Background(); //<>// //<>//
+Background b = new Background();
+Billeder pic = new Billeder();//<>// //<>//
 Spiller s;
-
-PImage mario;
 
 int w = 1158;
 int w2 = -82;
@@ -9,15 +8,7 @@ int w2 = -82;
 void setup() {
   size(1600, 900);
   frameRate(60);
-  mario = loadImage("Mario.png");
-  b.skull = loadImage("skull.png");
-  b.cloud = loadImage("cloud.png");
-  b.hus = loadImage("Hus.png");
-  b.path = loadImage("path.png");
-  b.path2 = loadImage("path2.png");
-  b.path3 = loadImage("path3.png");
-  b.hotel = loadImage("hotel.png");
-  b.church = loadImage("church.png");
+  pic.loadBilleder();
   s = new Spiller(35, 500, 100, 100);
 }
 
