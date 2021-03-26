@@ -11,6 +11,11 @@ void setup() {
   frameRate(60);
   mario = loadImage("Mario.png");
   b.skull = loadImage("skull.png");
+   b.hus = loadImage("Hus.png");
+   b.path = loadImage("path.png");
+   b.path2 = loadImage("path2.png");
+   //b.path3 = loadImage("path3.png");
+   b.hotel = loadImage("hotel.png");
   s = new Spiller(35, 500, 100, 100);
 }
 
