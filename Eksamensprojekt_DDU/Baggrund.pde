@@ -47,61 +47,34 @@ class Background {
       for (int i = 0; i < 12; i++) {
         //Vejstriber
         rect(stribeX + i * 150 - 1650, 740, 100, 20);
-
-        //Ekstra pynt
-       /* image(pic.skull, 430 + stribeX - 1650, 820, 50, 50);
-        image(pic.cloud, 1030 + stribeX - 1650, 250);
-        image(pic.cloud, 30 + stribeX - 1650, 160);
-        image(pic.cloud, 1350 + stribeX - 1650, 30);
-        //Hus
-        image(pic.path, 1020 + stribeX - 1650, 473);
-        image(pic.hus, 1030 + stribeX - 1650, 350);
-        //Hotel
-        image(pic.path2, 578 + stribeX - 1650, 443);
-        image(pic.hotel, 510 + stribeX - 1650, 71);
-        //Kirke
-        image(pic.path3, 145 + stribeX - 1650, 413);
-        image(pic.church, 50 + stribeX - 1650, 101); */
       }
       for (int i = 0; i < 12; i++) {
         //Vejstriber
         rect(stribeX + i * 150, 740, 100, 20);
-
-        //Ekstra pynt
-        image(pic.skull, 430 + stribeX, 820, 50, 50);
-        image(pic.cloud, 1030 + stribeX, 250);
-        image(pic.cloud, 30 + stribeX, 160);
-        image(pic.cloud, 1350 + stribeX, 30);
-        //Hus
-        image(pic.path, 1020 + stribeX, 473);
-        image(pic.hus, 1030 + stribeX, 350);
-        //Hotel
-        image(pic.path2, 578 + stribeX, 443);
-        image(pic.hotel, 510 + stribeX, 71);
-        //Kirke
-        image(pic.path3, 145 + stribeX, 413);
-        image(pic.church, 50 + stribeX, 101);
       }
       for (int i = 0; i < 12; i++) {
         //Vejstriber
         rect(stribeX + i * 150 + 1650, 740, 100, 20);
-
-       /* //Ekstra pynt
-        image(pic.skull, 430 + stribeX + 1650, 820, 50, 50);
-        image(pic.cloud, 1030 + stribeX + 1650, 250);
-        image(pic.cloud, 30 + stribeX + 1650, 160);
-        image(pic.cloud, 1350 + stribeX + 1650, 30);
-        //Hus
-        image(pic.path, 1020 + stribeX + 1650, 473);
-        image(pic.hus, 1030 + stribeX + 1650, 350);
-        //Hotel
-        image(pic.path2, 578 + stribeX + 1650, 443);
-        image(pic.hotel, 510 + stribeX + 1650, 71);
-        //Kirke
-        image(pic.path3, 145 + stribeX + 1650, 413);
-        image(pic.church, 50 + stribeX + 1650, 101); */
-      }     
-      if (stribeX < -1650) stribeX = 0;
+      }
+      
+      if (stribeX < -1650){
+        stribeX = 0;
+      }
     }
+        //Ekstra pynt
+    image(pic.skull, 430 + stribeX, 820, 50, 50);
+    image(pic.cloud, 1030 + stribeX, 250);
+    image(pic.cloud, 30 + stribeX, 160);
+    image(pic.cloud, 1350 + stribeX, 30);
+    //Hus
+    image(pic.path, 1020 + stribeX, 473);
+    image(pic.hus, 1030 + stribeX, 350);
+    //Hotel
+    image(pic.path2, 578 + stribeX, 443);
+    image(pic.hotel, 510 + stribeX, 71);
+    //Kirke
+    image(pic.path3, 145 + stribeX, 413);
+    image(pic.church, 50 + stribeX, 101);
   }
+
 }
