@@ -9,8 +9,9 @@ class Background {
   PImage path2;
   PImage path3;
 
-  boolean baggrundRykker = false;
+  boolean baggrundRykker = true;
   boolean stregerSetup = true;
+  boolean personRykker = true;
 
   int xSpeed = -5;
   int stribeX;
@@ -36,8 +37,11 @@ class Background {
 
     //Hvide streger
     if (baggrundRykker) {
-      stribeX = stribeX + xSpeed;
-      stregerSetup = false;
+      if (personRykker) {
+        stribeX = stribeX + 0;
+      } else {
+        stribeX = stribeX + xSpeed;
+      }
       for (int i = 0; i < 12; i++) {
         rect(stribeX+i*150, 740, 100, 20);
       }
@@ -61,13 +65,5 @@ class Background {
     //Hus
     image(path3, 145, 413);
     image(church, 50, 101);
-  }
-
-  void stregerSetup() {
-    if (stregerSetup) {
-      for (int i = 0; i < 12; i++) {
-        rect(stribeX+i*150, 740, 100, 20);
-      }
-    }
   }
 }

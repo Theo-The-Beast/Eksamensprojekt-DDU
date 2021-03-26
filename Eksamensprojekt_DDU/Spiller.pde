@@ -1,16 +1,16 @@
-class Spiller{
-int xPos;
-int yPos;
-int w;
-int h;
-int xSpeed;
-int ySpeed;
+class Spiller {
+  int xPos;
+  int yPos;
+  int w;
+  int h;
+  int xSpeed;
+  int ySpeed;
 
- boolean left = false;
+  boolean left = false;
   boolean right = false;
 
- Spiller(int tempX, int tempY, int tempW, int tempH) {
-   xPos = tempX;
+  Spiller(int tempX, int tempY, int tempW, int tempH) {
+    xPos = tempX;
     yPos = tempY;
     w = tempW;
     h = tempH;
@@ -18,18 +18,26 @@ int ySpeed;
     ySpeed = 0;
   }
 
-void tegnSpiller(){
-  fill(255);
-rect(xPos+73, yPos+35,55,165);
-image(mario, xPos, yPos+5, 200, 200);
-
-}
+  void tegnSpiller() {
+    fill(255);
+    rect(xPos+73, yPos+35, 55, 165);
+    image(mario, xPos, yPos+5, 200, 200);
+  }
 
   void bevagSpiller() {
     if (left) xPos=xPos-5;
     else xPos = xPos + 0;
     if (right) xPos=xPos+5;
     else xPos = xPos + 0;
+
+    if (xPos > 1150)
+    {
+      b.baggrundRykker = true;
+      b.personRykker = false; 
+      xSpeed = 0;
+    } else {
+      b.personRykker = true;
+    }
   }
 
   void bevagSpillerPress() {
@@ -49,5 +57,4 @@ image(mario, xPos, yPos+5, 200, 200);
       right = false;
     }
   }
-
 }
