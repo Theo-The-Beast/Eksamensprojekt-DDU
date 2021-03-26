@@ -10,6 +10,7 @@ void setup() {
   size(1600, 900);
   frameRate(60);
   mario = loadImage("Mario.png");
+  b.skull = loadImage("skull.png");
   s = new Spiller(35, 500, 100, 100);
 }
 
