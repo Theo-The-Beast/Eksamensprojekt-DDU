@@ -20,17 +20,17 @@ class Spiller {
 
   void tegnSpiller() {
     fill(255);
-    rect(xPos+73, yPos+35, 55, 165);
+    //rect(xPos+73, yPos+35, 55, 165);
     image(pic.mario, xPos, yPos+5, 200, 200);
   }
 
   void bevagSpiller() {
-    if (left) xPos=xPos-5;
+    if (left) xPos=xPos-10;
     else xPos = xPos + 0;
-    if (right) xPos=xPos+5;
+    if (right) xPos=xPos+10;
     else xPos = xPos + 0;
 
-    if (xPos > 1150)
+    if (xPos > 1250)
     {
       b.baggrundRykker = true;
       b.personRykker = false; 

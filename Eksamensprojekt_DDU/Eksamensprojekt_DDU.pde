@@ -3,14 +3,14 @@ Billeder pic = new Billeder();//<>// //<>//
 Debug Debug = new Debug();
 Spiller s;
 
-int w = 1158;
+int w = 1258;
 int w2 = -82;
 
 void setup() {
   size(1600, 900);
   frameRate(60);
   pic.loadBilleder();
-  s = new Spiller(35, 500, 100, 100);
+  s = new Spiller(400, 550, 100, 100);
 }
 
 void draw() {
