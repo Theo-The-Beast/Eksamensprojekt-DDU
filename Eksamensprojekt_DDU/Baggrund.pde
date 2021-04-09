@@ -11,6 +11,12 @@ class Background {
   int kirkeX = 50;
   int speedKirkeX = 0;
 
+  int husX = 1030;
+  int speedHusX = 0;
+
+  int hotelX = 510;
+  int speedHotelX = 0;
+
   void tegnbaggrund() {
     //BLÅ HIMMEL!!!
     for ( int i = 0; i < width; i++) {
@@ -37,7 +43,6 @@ class Background {
         stribeX = stribeX + 0;
       } else {
         stribeX = stribeX + xSpeed;
-        
       }
 
       //Ændre xSpeed når boolean bliver true eller false
@@ -60,42 +65,73 @@ class Background {
         //Vejstriber
         rect(stribeX + i * 150 + 1650, 740, 100, 20);
       }
-      
-      if (stribeX < -1650){
+
+      if (stribeX < -1650) {
         stribeX = 0;
       }
     }
-        //Ekstra pynt
+    //Ekstra pynt
     /*image(pic.skull, 430 + stribeX, 820, 50, 50);
-    image(pic.cloud, 1030 + stribeX, 250);
-    image(pic.cloud, 30 + stribeX, 160);
-    image(pic.cloud, 1350 + stribeX, 30);
-    //Hus
-    image(pic.path, 1020 + stribeX, 473);
-    image(pic.hus, 1030 + stribeX, 350);
-    //Hotel
-    image(pic.path2, 578 + stribeX, 443);
-    image(pic.hotel, 510 + stribeX, 71);*/
-    
+     image(pic.cloud, 1030 + stribeX, 250);
+     image(pic.cloud, 30 + stribeX, 160);
+     image(pic.cloud, 1350 + stribeX, 30);
+     //Hus
+     image(pic.path, 1020 + stribeX, 473);
+     image(pic.hus, 1030 + stribeX, 350);
+     //Hotel
+     image(pic.path2, 578 + stribeX, 443);
+     image(pic.hotel, 510 + stribeX, 71);*/
+
     if (baggrundRykker) {
       //Ændre xSpeed når boolean bliver true eller false
       if (!personRykkerHojer) {
         kirkeX = kirkeX + xSpeed;
+        husX = husX + xSpeed;
+        hotelX = hotelX + xSpeed;
       }
-      }
-      if (!personRykkerVenstre) {
-        kirkeX = kirkeX - xSpeed;
-      }
+    }
+    if (!personRykkerVenstre) {
+      kirkeX = kirkeX - xSpeed;
+      husX = husX - xSpeed;
+      hotelX = hotelX - xSpeed;
+    }
     //Kirke
-    if (kirkeX <= -450){
-    kirkeX = width+30;
+    if (kirkeX <= -550) {
+      kirkeX = width+30;
     }
-    
-    if (kirkeX >= width+32){
-    kirkeX = -445;
+
+    if (kirkeX >= width+32) {
+      kirkeX = -445;
     }
-    
+
+    //Hus
+    if (husX <= -550) {
+      husX = width+30;
+    }
+
+    if (husX >= width+32) {
+      husX = -445;
+    }
+
+    //Hotel
+    if (hotelX <= -550) {
+      hotelX = width+30;
+    }
+
+    if (hotelX >= width+32) {
+      hotelX = -445;
+    }
+
+    //Kirke Drawing
     image(pic.path3, kirkeX + 95, 413);
     image(pic.church, kirkeX, 101);
+
+    //Hus Drawing
+    image(pic.path, husX -10, 473);
+    image(pic.hus, husX, 350);
+
+    //Hotel drawing
+    image(pic.path2, hotelX + 68, 443);
+    image(pic.hotel, hotelX, 71);
   }
 }
