@@ -73,15 +73,7 @@ class Background {
     }
     //Ekstra pynt
     /*image(pic.skull, 430 + stribeX, 820, 50, 50);
-     image(pic.cloud, 1030, 250);
-     image(pic.cloud, 30 + stribeX, 160);
-     image(pic.cloud, 1350 + stribeX, 30);
-     //Hus
-     image(pic.path, 1020 + stribeX, 473);
-     image(pic.hus, 1030 + stribeX, 350);
-     //Hotel
-     image(pic.path2, 578 + stribeX, 443);
-     image(pic.hotel, 510 + stribeX, 71);*/
+*/
 
     if (baggrundRykker) {
       //Ændre xSpeed når boolean bliver true eller false
@@ -105,65 +97,65 @@ class Background {
       sky3X = sky3X - xSpeed;
     }
     //Kirke
-    if (kirkeX <= -550) {
+    if (kirkeX < -550) {
       kirkeX = width+30;
     }
 
-    if (kirkeX >= width+32) {
-      kirkeX = -445;
+    if (kirkeX > width+32) {
+      kirkeX = -550;
     }
 
     //Hus
-    if (husX <= -550) {
+    if (husX < -550) {
       husX = width+30;
     }
 
-    if (husX >= width+32) {
-      husX = -445;
+    if (husX > width+32) {
+      husX = -550;
     }
 
     //Hotel
-    if (hotelX <= -550) {
+    if (hotelX < -550) {
       hotelX = width+30;
     }
 
-    if (hotelX >= width+32) {
-      hotelX = -445;
+    if (hotelX > width+32) {
+      hotelX = -550;
     }
 
     //Tree
-    if (treeX <= -550) {
+    if (treeX < -550) {
       treeX = width+30;
     }
 
-    if (treeX >= width+32) {
-      treeX = -445;
+    if (treeX > width+32) {
+      treeX = -550;
     }
 
     //skyer
     //sky1
-    if (sky1X <= -550) {
+    if (sky1X < -550) {
       sky1X = width+30;
     }
 
-    if (sky1X >= width+32) {
-      sky1X = -445;
+    if (sky1X > width+32) {
+      sky1X = -550;
     }
     
-    if (sky2X <= -550) {
+    if (sky2X < -550) {
       sky2X = width+30;
     }
 
-    if (sky2X >= width+32) {
-      sky2X = -445;
+    if (sky2X > width+32) {
+      sky2X = -550;
     }
     
-    if (sky3X <= -550) {
+    if (sky3X < -550) {
       sky3X = width+30;
     }
 
-    if (sky3X >= width+32) {
-      sky3X = -445;
+    if (sky3X > width+32) {
+      sky3X = -550;
     }
 
     //Kirke Drawing
