@@ -6,6 +6,9 @@ Spiller s;
 int w = 1258;
 int w2 = 142;
 
+int startTime = 0;
+int time = 0;
+
 void setup() {
   size(1600, 900);
   frameRate(60);
@@ -30,6 +33,8 @@ void draw() {
   
   //Debug
   Debug.Debug();
+  
+  timer();
 }
 void keyPressed() {
   s.bevagSpillerPress();
@@ -46,4 +51,10 @@ void vaegge() {
   if (s.xPos + 10 > w) { 
     s.xPos = w - 10;
   }
+}
+
+void timer() {
+  time = millis()/1000 - startTime;
+  textSize(32);
+  text(time, 1500, 100);
 }
