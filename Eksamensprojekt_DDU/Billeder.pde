@@ -9,6 +9,7 @@ class Billeder {
   PImage path;
   PImage path2;
   PImage path3;
+  PImage tree;
 
   void loadBilleder() {
     //Vores mand 
@@ -17,6 +18,7 @@ class Billeder {
     //Ekstra materiale 
     skull = loadImage("skull.png");
     cloud = loadImage("cloud.png");
+    tree = loadImage("tree.png");
 
     //Stier
     path = loadImage("path.png");

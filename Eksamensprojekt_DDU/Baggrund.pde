@@ -9,13 +9,9 @@ class Background {
   int stribeX;
 
   int kirkeX = 50;
-  int speedKirkeX = 0;
-
   int husX = 1030;
-  int speedHusX = 0;
-
   int hotelX = 510;
-  int speedHotelX = 0;
+  int treeX = 1850;
 
   void tegnbaggrund() {
     //BLÅ HIMMEL!!!
@@ -88,12 +84,14 @@ class Background {
         kirkeX = kirkeX + xSpeed;
         husX = husX + xSpeed;
         hotelX = hotelX + xSpeed;
+        treeX = treeX + xSpeed;
       }
     }
     if (!personRykkerVenstre) {
       kirkeX = kirkeX - xSpeed;
       husX = husX - xSpeed;
       hotelX = hotelX - xSpeed;
+      treeX = treeX - xSpeed;
     }
     //Kirke
     if (kirkeX <= -550) {
@@ -122,6 +120,15 @@ class Background {
       hotelX = -445;
     }
 
+    //Tree
+    if (treeX <= -550) {
+      treeX = width+30;
+    }
+    
+    if (treeX >= width+32){
+      treeX = -445;
+    }
+
     //Kirke Drawing
     image(pic.path3, kirkeX + 95, 413);
     image(pic.church, kirkeX, 101);
@@ -133,5 +140,8 @@ class Background {
     //Hotel drawing
     image(pic.path2, hotelX + 68, 443);
     image(pic.hotel, hotelX, 71);
+    
+    //Tree drawing
+    image(pic.tree, treeX, 130);
   }
 }

@@ -1,5 +1,5 @@
-Background b = new Background(); //<>// //<>//
-Billeder pic = new Billeder();//<>// //<>//
+Background b = new Background(); //<>// //<>// //<>//
+Billeder pic = new Billeder();//<>// //<>// //<>//
 Debug Debug = new Debug();
 Spiller s;
 
@@ -28,8 +28,6 @@ void draw() {
   //indsæt spilleren
   s.tegnSpiller();
   s.bevagSpiller();
-  
-  println(b.kirkeX);
   
   //Debug
   Debug.Debug();
