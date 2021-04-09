@@ -12,6 +12,11 @@ class Background {
   int husX = 1030;
   int hotelX = 510;
   int treeX = 1850;
+  int sky1X = 30;
+  int sky2X = 1030;
+  int sky3X = 1350;
+
+
 
   void tegnbaggrund() {
     //BLÅ HIMMEL!!!
@@ -68,7 +73,7 @@ class Background {
     }
     //Ekstra pynt
     /*image(pic.skull, 430 + stribeX, 820, 50, 50);
-     image(pic.cloud, 1030 + stribeX, 250);
+     image(pic.cloud, 1030, 250);
      image(pic.cloud, 30 + stribeX, 160);
      image(pic.cloud, 1350 + stribeX, 30);
      //Hus
@@ -85,6 +90,9 @@ class Background {
         husX = husX + xSpeed;
         hotelX = hotelX + xSpeed;
         treeX = treeX + xSpeed;
+        sky1X = sky1X + xSpeed;
+        sky2X = sky2X + xSpeed;
+        sky3X = sky3X + xSpeed;
       }
     }
     if (!personRykkerVenstre) {
@@ -92,6 +100,9 @@ class Background {
       husX = husX - xSpeed;
       hotelX = hotelX - xSpeed;
       treeX = treeX - xSpeed;
+      sky1X = sky1X - xSpeed;
+      sky2X = sky2X - xSpeed;
+      sky3X = sky3X - xSpeed;
     }
     //Kirke
     if (kirkeX <= -550) {
@@ -124,9 +135,35 @@ class Background {
     if (treeX <= -550) {
       treeX = width+30;
     }
-    
-    if (treeX >= width+32){
+
+    if (treeX >= width+32) {
       treeX = -445;
+    }
+
+    //skyer
+    //sky1
+    if (sky1X <= -550) {
+      sky1X = width+30;
+    }
+
+    if (sky1X >= width+32) {
+      sky1X = -445;
+    }
+    
+    if (sky2X <= -550) {
+      sky2X = width+30;
+    }
+
+    if (sky2X >= width+32) {
+      sky2X = -445;
+    }
+    
+    if (sky3X <= -550) {
+      sky3X = width+30;
+    }
+
+    if (sky3X >= width+32) {
+      sky3X = -445;
     }
 
     //Kirke Drawing
@@ -137,11 +174,20 @@ class Background {
     image(pic.path, husX -10, 473);
     image(pic.hus, husX, 350);
 
-    //Hotel drawing
+    //Hotel Drawing
     image(pic.path2, hotelX + 68, 443);
     image(pic.hotel, hotelX, 71);
-    
-    //Tree drawing
+
+    //Tree Drawing
     image(pic.tree, treeX, 130);
+    
+    //Sky1 Drawing
+    image(pic.cloud, sky1X, 160);
+    
+    //Sky2 Drawing
+    image(pic.cloud, sky2X, 250);
+    
+    //Sky3 Drawing
+    image(pic.cloud, sky3X, 30);
   }
 }
