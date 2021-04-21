@@ -1,5 +1,6 @@
-Background b = new Background(); //<>// //<>// //<>//
-Billeder pic = new Billeder();//<>// //<>// //<>//
+Background b = new Background();  //<>//
+Billeder pic = new Billeder(); //<>//
+Fjender f = new Fjender();
 Debug Debug = new Debug();
 Spiller s = new Spiller(400, 550, 100, 100);
 Collectibles c = new Collectibles();
@@ -35,9 +36,14 @@ void draw() {
   //Debug
   Debug.Debug();
   
+  //Fjender
+  f.tegnFjender();
+  f.bevaegFjender();
+  f.collideFjender();
+  
   timer();
-  c.lektier();
-  c.collect();
+  //c.lektier();
+  //c.collect();
   println("xpos " + s.xPos);
   println("Collect xPos " + c.collectXpos);
   //println("ypos " + s.yPos);
