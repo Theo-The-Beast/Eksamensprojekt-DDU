@@ -4,11 +4,13 @@ class Collectibles {
   int collectYpos;
 
   void lektier() {
-    ellipse(b.stribeX+1600, 650, 20, 20);
+    collectXpos=b.stribeX+1600;
+    collectYpos=650;
+    ellipse(collectXpos, collectYpos, 20, 20);
   }
 
   void collect() {
-    if (s.xPos >= 1590 && s.xPos <= 1610 && s.yPos >= 540 && s.yPos <= 560) {
+    if (s.xPos == collectXpos && s.yPos == collectYpos) {
       println("hej");
     }
   }
