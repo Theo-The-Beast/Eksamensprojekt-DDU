@@ -26,6 +26,7 @@ void draw() {
   noStroke();
   fill(112, 82, 0);
   b.tegnbaggrund();
+  text(c.antalCollect + "/10", 50,50);
 
   //indsæt spilleren
   s.tegnSpiller();
@@ -38,8 +39,9 @@ void draw() {
   c.lektier();
   c.collect();
   println("xpos " + s.xPos);
-  println("ypos " + s.yPos);
-  println("stribex " + b.stribeX);
+  println("Collect xPos " + c.collectXpos);
+  //println("ypos " + s.yPos);
+  //println("stribex " + b.stribeX);
 }
 void keyPressed() {
   s.bevagSpillerPress();
