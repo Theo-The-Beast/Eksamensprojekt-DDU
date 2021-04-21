@@ -1,7 +1,9 @@
 Background b = new Background(); //<>// //<>// //<>//
 Billeder pic = new Billeder();//<>// //<>// //<>//
 Debug Debug = new Debug();
-Spiller s;
+Spiller s = new Spiller(400, 550, 100, 100);
+Collectibles c = new Collectibles();
+
 
 int w = 1258;
 int w2 = 142;
@@ -13,7 +15,7 @@ void setup() {
   size(1600, 900);
   frameRate(60);
   pic.loadBilleder();
-  s = new Spiller(400, 550, 100, 100);
+  
 }
 
 void draw() {
@@ -33,6 +35,11 @@ void draw() {
   Debug.Debug();
   
   timer();
+  c.lektier();
+  c.collect();
+  println("xpos " + s.xPos);
+  println("ypos " + s.yPos);
+  println("stribex " + b.stribeX);
 }
 void keyPressed() {
   s.bevagSpillerPress();
