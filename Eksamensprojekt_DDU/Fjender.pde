@@ -16,6 +16,7 @@ class Fjender {
 
     if (s.xPos+100 >= fjenderXpos /*50 er bredde*/ && s.xPos+100 <= fjenderXpos+100 && s.yPos == fjenderYpos-100) {
       println("Fjende Ramt");
+      fill(255,0,0);
     }
   }
 }

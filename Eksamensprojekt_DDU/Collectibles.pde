@@ -12,6 +12,7 @@ class Collectibles {
     collectYpos=650;
     if (visCollect) {
       ellipse(collectXpos, collectYpos, 100, 100);
+      text("Deez nuts",collectXpos, collectYpos, 20,20);
     }
   }
 
