@@ -12,12 +12,13 @@ int w2 = 142;
 
 int startTime = 0;
 int time = 0;
-  
+
 int scene = 0;
 
 float tyndekraft;
+boolean tyndekraftBool = true;
 
-  void setup() {
+void setup() {
   size(1600, 900);
   frameRate(60);
   pic.loadBilleder();
@@ -60,6 +61,7 @@ void level() {
   //indsæt spilleren
   s.tegnSpiller();
   s.bevagSpiller();
+  s.maksHopHoejde();
 
   //Debug
   Debug.Debug();
@@ -76,6 +78,7 @@ void level() {
   //println("Collect xPos " + c.collectXpos);
   println("ypos " + s.yPos);
   //println("stribex " + b.stribeX);
+  println("tyndekraft " + tyndekraft);
 
   //Tilbage knap
   rect(20, 20, 30, 30);
@@ -120,15 +123,22 @@ void vaegge() {
 }
 
 void tyndekraft() {
+
   if (s.yPos >= 550) {
-    tyndekraft = 1.00;
+    tyndekraftBool=true;
   } else {
-    tyndekraft = 1.01;
+    tyndekraftBool = false;
+  }
+  
+  if (tyndekraftBool) {
+    tyndekraft = 0;
+  } else {
+    tyndekraft = 4;
   }
 }
 
 void ingenTyndekraft() {
-  tyndekraft=1.00;
+  tyndekraft = 0;
 }
 
 void timer() {

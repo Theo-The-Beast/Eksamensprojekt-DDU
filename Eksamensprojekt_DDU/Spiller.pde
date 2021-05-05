@@ -23,7 +23,7 @@ class Spiller {
   void tegnSpiller() {
     fill(255);
     //rect(xPos+73, yPos+35, 55, 165);
-    yPos = yPos * hop * tyndekraft;
+    yPos = yPos * hop + tyndekraft;
     image(pic.mario, xPos, yPos+5, 200, 200);
   }
 
@@ -51,10 +51,20 @@ class Spiller {
     }
   }
 
+  void maksHopHoejde() {
+    if (yPos <= 150) {
+      hoppe = false;
+    }
+    if (hoppe) {
+      hop = 0.96;
+    } else {
+      hop = 1.0;
+    }
+  }
+
   void spillerHopPress() {
-    if (keyCode == UP && hoppe == false || keyCode == 32 && hoppe == false) {
+    if (keyCode == UP && hoppe == false && yPos >= 550 || keyCode == 32 && hoppe == false && yPos >= 550) {
       ingenTyndekraft();
-      hop = 0.99;
       println("Hoppe Aktiv");
       hoppe = true;
     }
