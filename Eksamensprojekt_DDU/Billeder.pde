@@ -14,7 +14,7 @@ class Billeder {
   void loadBilleder() {
     //Vores mand 
     mario = loadImage("Mario.png");
-    
+
     //Ekstra materiale 
     skull = loadImage("skull.png");
     cloud = loadImage("cloud.png");
@@ -24,7 +24,7 @@ class Billeder {
     path = loadImage("path.png");
     path2 = loadImage("path2.png");
     path3 = loadImage("path3.png");
-    
+
     //Bygninger
     hus = loadImage("Hus.png");
     hotel = loadImage("hotel.png");

@@ -33,11 +33,11 @@ class Menu {
       exit();
     }
   }
-  
+
   void tilbageKnap() {
     //Home/pause
     if (mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50) {
-     scene=0;
+      scene=0;
     }
   }
 

@@ -73,7 +73,7 @@ class Background {
     }
     //Ekstra pynt
     /*image(pic.skull, 430 + stribeX, 820, 50, 50);
-*/
+     */
 
     if (baggrundRykker) {
       //Ændre xSpeed når boolean bliver true eller false
@@ -141,7 +141,7 @@ class Background {
     if (sky1X > width+32) {
       sky1X = -550;
     }
-    
+
     if (sky2X < -550) {
       sky2X = width+30;
     }
@@ -149,7 +149,7 @@ class Background {
     if (sky2X > width+32) {
       sky2X = -550;
     }
-    
+
     if (sky3X < -550) {
       sky3X = width+30;
     }
@@ -172,13 +172,13 @@ class Background {
 
     //Tree Drawing
     image(pic.tree, treeX, 130);
-    
+
     //Sky1 Drawing
     image(pic.cloud, sky1X, 160);
-    
+
     //Sky2 Drawing
     image(pic.cloud, sky2X, 250);
-    
+
     //Sky3 Drawing
     image(pic.cloud, sky3X, 30);
   }

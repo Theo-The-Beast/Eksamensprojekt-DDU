@@ -6,6 +6,7 @@ Spiller s = new Spiller(400, 550, 100, 100);
 Collectibles c = new Collectibles();
 WinLose wl = new WinLose();
 Menu m = new Menu();
+Obstacles o = new Obstacles();
 
 int w = 1258;
 int w2 = 142;
@@ -16,7 +17,10 @@ int time = 0;
 int scene = 0;
 
 float tyndekraft;
-boolean tyndekraftBool = true;
+int tyndekraftStartPos = 550;
+
+boolean tyndekraftAktiv = true;
+boolean tyndekraftBool = false;
 
 void setup() {
   size(1600, 900);
@@ -28,7 +32,7 @@ void draw() {
   clear();
   vaegge();
   tyndekraft();
-  println(scene);
+  //println(scene);
   if (scene==0) {
     m.display();
   }
@@ -76,9 +80,16 @@ void level() {
   //c.collect();
   //println("xpos " + s.xPos);
   //println("Collect xPos " + c.collectXpos);
-  println("ypos " + s.yPos);
+  //println("ypos " + s.yPos);
+  //println("Ob ypos " + o.obstacleYPos);
   //println("stribex " + b.stribeX);
-  println("tyndekraft " + tyndekraft);
+  //println("tyndekraft " + tyndekraft);
+  //println("tyndekraftStartPos " + tyndekraftStartPos);
+  println(tyndekraftAktiv);
+
+  //Obstacles
+  o.visObstacle();
+  o.collideObstacle();
 
   //Tilbage knap
   rect(20, 20, 30, 30);
@@ -123,22 +134,22 @@ void vaegge() {
 }
 
 void tyndekraft() {
-
-  if (s.yPos >= 550) {
-    tyndekraftBool=true;
+  if (s.yPos <= tyndekraftStartPos && tyndekraftAktiv == true) {
+    tyndekraftBool = true;
   } else {
     tyndekraftBool = false;
   }
-  
+
   if (tyndekraftBool) {
-    tyndekraft = 0;
+    tyndekraft = 5;
   } else {
-    tyndekraft = 4;
+    tyndekraft = 0;
   }
 }
 
 void ingenTyndekraft() {
-  tyndekraft = 0;
+  tyndekraftAktiv = false;
+  tyndekraftBool = false;
 }
 
 void timer() {

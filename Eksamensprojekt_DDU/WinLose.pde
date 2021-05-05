@@ -17,7 +17,7 @@ class WinLose {
     rect(675, 500, 250, 100);
     rect(675, 650, 250, 100);
     fill(0);
-    
+
     text("Main Menu", 725, 561);
     text("Exit", 765, 711);
     fill(255);

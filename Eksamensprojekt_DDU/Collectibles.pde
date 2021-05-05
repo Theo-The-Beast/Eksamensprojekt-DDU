@@ -12,12 +12,12 @@ class Collectibles {
     collectYpos=650;
     if (visCollect) {
       ellipse(collectXpos, collectYpos, 100, 100);
-      text("Deez nuts",collectXpos, collectYpos, 20,20);
+      text("Deez nuts", collectXpos, collectYpos, 20, 20);
     }
   }
 
   void collect() {
-    if (s.xPos+100 >= collectXpos-50 && s.xPos+100 <= collectXpos+50 && s.yPos == collectYpos-100 && collectFaaet == false) {
+    if (s.xPos+100 >= collectXpos-50 && s.xPos+100 <= collectXpos+50 && s.yPos >= collectYpos+100 && collectFaaet == false) {
       collectFaaet = true;
       if (collectFaaet) {
         antalCollect += 1;

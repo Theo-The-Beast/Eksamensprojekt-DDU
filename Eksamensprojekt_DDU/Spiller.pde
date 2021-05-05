@@ -64,7 +64,6 @@ class Spiller {
 
   void spillerHopPress() {
     if (keyCode == UP && hoppe == false && yPos >= 550 || keyCode == 32 && hoppe == false && yPos >= 550) {
-      ingenTyndekraft();
       println("Hoppe Aktiv");
       hoppe = true;
     }
@@ -72,7 +71,6 @@ class Spiller {
 
   void spillerHopRelease() {
     if (keyCode == UP && hoppe == true || keyCode == 32 && hoppe == true) {
-      hop = 1.0;
       println("Hoppe ikke Aktiv");
       hoppe = false;
     }
