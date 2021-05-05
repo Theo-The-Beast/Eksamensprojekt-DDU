@@ -85,7 +85,7 @@ void level() {
   //println("stribex " + b.stribeX);
   //println("tyndekraft " + tyndekraft);
   //println("tyndekraftStartPos " + tyndekraftStartPos);
-  println(tyndekraftAktiv);
+  println(s.hoppe);
 
   //Obstacles
   o.visObstacle();
