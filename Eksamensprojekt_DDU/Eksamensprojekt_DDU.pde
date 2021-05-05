@@ -1,5 +1,5 @@
-Background b = new Background();  //<>// //<>//
-Billeder pic = new Billeder(); //<>// //<>//
+Background b = new Background(); //<>// //<>//
+Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
 Spiller s = new Spiller(400, 550, 100, 100);
@@ -7,16 +7,17 @@ Collectibles c = new Collectibles();
 WinLose wl = new WinLose();
 Menu m = new Menu();
 
-
 int w = 1258;
 int w2 = 142;
 
 int startTime = 0;
 int time = 0;
-
+  
 int scene = 0;
 
-void setup() {
+float tyndekraft;
+
+  void setup() {
   size(1600, 900);
   frameRate(60);
   pic.loadBilleder();
@@ -24,6 +25,8 @@ void setup() {
 
 void draw() {
   clear();
+  vaegge();
+  tyndekraft();
   println(scene);
   if (scene==0) {
     m.display();
@@ -32,15 +35,15 @@ void draw() {
   if (scene == 1) {
     level();
   }
-  
+
   if (scene == 2) {
     m.regler();
   }
-  
+
   if (scene == 3) {
     wl.lose();
   }
-  
+
   if (scene == 4) {
     wl.win();
   }
@@ -69,25 +72,27 @@ void level() {
   timer();
   //c.lektier();
   //c.collect();
-  println("xpos " + s.xPos);
-  println("Collect xPos " + c.collectXpos);
-  //println("ypos " + s.yPos);
+  //println("xpos " + s.xPos);
+  //println("Collect xPos " + c.collectXpos);
+  println("ypos " + s.yPos);
   //println("stribex " + b.stribeX);
-  
+
   //Tilbage knap
-    rect(20, 20, 30, 30);
-    fill(0);
-    rect(28, 22, 4, 26);
-    rect(38, 22, 4, 26);
-    fill(255);
+  rect(20, 20, 30, 30);
+  fill(0);
+  rect(28, 22, 4, 26);
+  rect(38, 22, 4, 26);
+  fill(255);
 }
 
 void keyPressed() {
   s.bevagSpillerPress();
+  s.spillerHopPress();
 }
 
 void keyReleased() {
   s.bevagSpillerRelease();
+  s.spillerHopRelease();
 }
 
 void mouseClicked() {
@@ -96,8 +101,8 @@ void mouseClicked() {
   } else if (scene == 1) {
     m.tilbageKnap();
   } else if (scene == 2) {
-   m.tilbageKnap();
-   } /*else if (scene == 3) {
+    m.tilbageKnap();
+  } /*else if (scene == 3) {
    Lvl.level3Knap();
    } else if (scene == 4) {
    m.tilbageKnap();
@@ -112,6 +117,18 @@ void vaegge() {
   if (s.xPos + 10 > w) { 
     s.xPos = w - 10;
   }
+}
+
+void tyndekraft() {
+  if (s.yPos >= 550) {
+    tyndekraft = 1.00;
+  } else {
+    tyndekraft = 1.01;
+  }
+}
+
+void ingenTyndekraft() {
+  tyndekraft=1.00;
 }
 
 void timer() {

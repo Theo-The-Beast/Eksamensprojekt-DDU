@@ -1,13 +1,15 @@
 class Spiller {
   int xPos;
-  int yPos;
+  float yPos;
   int w;
   int h;
   int xSpeed;
   int ySpeed;
+  float hop = 1.0;
 
   boolean left = false;
   boolean right = false;
+  boolean hoppe = false;
 
   Spiller(int tempX, int tempY, int tempW, int tempH) {
     xPos = tempX;
@@ -21,6 +23,7 @@ class Spiller {
   void tegnSpiller() {
     fill(255);
     //rect(xPos+73, yPos+35, 55, 165);
+    yPos = yPos * hop * tyndekraft;
     image(pic.mario, xPos, yPos+5, 200, 200);
   }
 
@@ -45,6 +48,23 @@ class Spiller {
       xSpeed = 0;
     } else {
       b.personRykkerVenstre = true;
+    }
+  }
+
+  void spillerHopPress() {
+    if (keyCode == UP && hoppe == false || keyCode == 32 && hoppe == false) {
+      ingenTyndekraft();
+      hop = 0.99;
+      println("Hoppe Aktiv");
+      hoppe = true;
+    }
+  }
+
+  void spillerHopRelease() {
+    if (keyCode == UP && hoppe == true || keyCode == 32 && hoppe == true) {
+      hop = 1.0;
+      println("Hoppe ikke Aktiv");
+      hoppe = false;
     }
   }
 
