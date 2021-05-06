@@ -55,15 +55,15 @@ class Spiller {
     if (yPos <= 150) {
       hoppe = false;
     }
-    if (hoppe) {
-      hop = 0.96;
-    } else {
-      hop = 1.0;
+      if (hoppe) {
+        hop = 0.96;
+      } else {
+        hop = 1.0;
+      }
     }
-  }
 
   void spillerHopPress() {
-    if (keyCode == UP && hoppe == false && yPos >= 550 || keyCode == 32 && hoppe == false && yPos >= 550) {
+    if (keyCode == UP && hoppe == false && yPos >= tyndekraftStartPos || keyCode == 32 && hoppe == false && yPos >= tyndekraftStartPos) {
       println("Hoppe Aktiv");
       hoppe = true;
     }

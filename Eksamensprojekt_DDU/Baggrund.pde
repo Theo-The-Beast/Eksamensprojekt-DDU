@@ -6,7 +6,7 @@ class Background {
   boolean personRykkerVenstre = true;
 
   int xSpeed = -5;
-  int stribeX;
+  int screenMover;
 
   int kirkeX = 50;
   int husX = 1030;
@@ -41,34 +41,34 @@ class Background {
     if (baggrundRykker) {
       //Ændre xSpeed når boolean bliver true eller false
       if (personRykkerHojer) {
-        stribeX = stribeX + 0;
+        screenMover = screenMover + 0;
       } else {
-        stribeX = stribeX + xSpeed;
+        screenMover = screenMover + xSpeed;
       }
 
       //Ændre xSpeed når boolean bliver true eller false
       if (personRykkerVenstre) {
-        stribeX = stribeX + 0;
+        screenMover = screenMover + 0;
       } else {
-        stribeX = stribeX - xSpeed;
+        screenMover = screenMover - xSpeed;
       }
 
       //Streger på vejen
       for (int i = 0; i < 12; i++) {
         //Vejstriber
-        rect(stribeX + i * 150 - 1650, 740, 100, 20);
+        rect(screenMover + i * 150 - 1650, 740, 100, 20);
       }
       for (int i = 0; i < 12; i++) {
         //Vejstriber
-        rect(stribeX + i * 150, 740, 100, 20);
+        rect(screenMover + i * 150, 740, 100, 20);
       }
       for (int i = 0; i < 12; i++) {
         //Vejstriber
-        rect(stribeX + i * 150 + 1650, 740, 100, 20);
+        rect(screenMover + i * 150 + 1650, 740, 100, 20);
       }
 
-      if (stribeX < -1650) {
-        stribeX = 0;
+      if (screenMover < -1650) {
+        screenMover = 0;
       }
     }
     //Ekstra pynt

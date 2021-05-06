@@ -27,6 +27,7 @@ class WinLose {
   }
 
   void lose() {
+    println("Lose Screen");
   }
 
   void loseKnap() {

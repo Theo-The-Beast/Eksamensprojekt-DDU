@@ -8,7 +8,7 @@ class Collectibles {
   boolean collectFaaet = false;
 
   void lektier() {
-    collectXpos=b.stribeX+1600;
+    collectXpos=b.screenMover+2000;
     collectYpos=650;
     if (visCollect) {
       ellipse(collectXpos, collectYpos, 100, 100);
@@ -17,7 +17,7 @@ class Collectibles {
   }
 
   void collect() {
-    if (s.xPos+100 >= collectXpos-50 && s.xPos+100 <= collectXpos+50 && s.yPos >= collectYpos+100 && collectFaaet == false) {
+    if (s.xPos+100 >= collectXpos-50 && s.xPos+100 <= collectXpos+50 && s.yPos >= collectYpos-200 && collectFaaet == false) {
       collectFaaet = true;
       if (collectFaaet) {
         antalCollect += 1;

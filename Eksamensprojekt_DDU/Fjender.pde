@@ -4,7 +4,7 @@ class Fjender {
 
 
   void tegnFjender() {
-    fjenderXpos = 1600 + b.stribeX;
+    fjenderXpos = 1600 + b.screenMover;
     fjenderYpos = 650;
     rect(fjenderXpos, fjenderYpos, 100, 100);
   }
@@ -16,6 +16,7 @@ class Fjender {
 
     if (s.xPos+100 >= fjenderXpos /*50 er bredde*/ && s.xPos+100 <= fjenderXpos+100 && s.yPos+100 >= fjenderYpos) {
       println("Fjende Ramt");
+      scene = 3;
       fill(255, 0, 0);
     }
   }

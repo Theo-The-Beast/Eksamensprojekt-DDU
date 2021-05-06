@@ -1,13 +1,18 @@
 class Obstacles {
-  int obstacleYPos = 450;
+  int obstacleXPos;
+  int obstacleYPos;
+  int obstacleWidth = 400;
+  int ovstacleHeight = 50;
 
 
   void visObstacle() {
-    rect(600, obstacleYPos, 400, 50);
+    obstacleXPos = 600 + b.screenMover;
+    obstacleYPos = 450;
+    rect(obstacleXPos, obstacleYPos, obstacleWidth, ovstacleHeight);
   }
 
-  void collideObstacle() {
-    if (s.xPos+100 >= 600 && s.xPos+100 <= 1000 && s.yPos+200 >= obstacleYPos && s.yPos+190 <= obstacleYPos) {
+  void collideObstacle() {                                                  /* 200 er billede højde*/        /* 190 er kalibrering */
+    if (s.xPos+100 >= obstacleXPos && s.xPos+100 <= obstacleXPos+obstacleWidth && s.yPos+200 >= obstacleYPos && s.yPos+190 <= obstacleYPos) {
       tyndekraftStartPos = obstacleYPos-200;
       //println("Obstacle ramt");
     } else {

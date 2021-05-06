@@ -1,4 +1,4 @@
-Background b = new Background(); //<>// //<>//
+Background b = new Background(); //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -76,16 +76,18 @@ void level() {
   f.collideFjender();
 
   timer();
-  //c.lektier();
-  //c.collect();
-  //println("xpos " + s.xPos);
-  //println("Collect xPos " + c.collectXpos);
-  //println("ypos " + s.yPos);
+  c.lektier();
+  c.collect();
+  println("xpos " + s.xPos);
+  println("Collect xPos " + c.collectXpos);
+  println("ypos " + s.yPos);
+  println("Collect yPos " + c.collectYpos);
+  println(c.collectFaaet);
   //println("Ob ypos " + o.obstacleYPos);
   //println("stribex " + b.stribeX);
   //println("tyndekraft " + tyndekraft);
   //println("tyndekraftStartPos " + tyndekraftStartPos);
-  println(s.hoppe);
+  //println(s.hoppe);
 
   //Obstacles
   o.visObstacle();
