@@ -1,13 +1,15 @@
 class Collectibles {
 
+  ArrayList<Collectibles> liste = new ArrayList<Collectibles>();
+  
   int collectXpos;
   int collectYpos;
-  int antalCollect;
+  int samletCollect;
 
   boolean visCollect = true;
   boolean collectFaaet = false;
 
-  void lektier() {
+  void visLektier() {
     collectXpos=b.screenMover+2000;
     collectYpos=650;
     if (visCollect) {
@@ -20,7 +22,7 @@ class Collectibles {
     if (s.xPos+100 >= collectXpos-50 && s.xPos+100 <= collectXpos+50 && s.yPos >= collectYpos-200 && collectFaaet == false) {
       collectFaaet = true;
       if (collectFaaet) {
-        antalCollect += 1;
+        samletCollect += 1;
       }
       visCollect = false;
     }
