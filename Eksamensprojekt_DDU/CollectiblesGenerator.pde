@@ -7,17 +7,29 @@ class CollectiblesGenerator {
   void antalCollectibles(int antal) {
     liste.clear();
     for (int i = 0; i < antal; i++) {
-      Collectibles c = new Collectibles();
+      Collectibles c = new Collectibles(2000, 650);
       liste.add(c);
     }
     antalCollectibles = antal;
   }
 
   void display() {
-    c.visLektier();
+    for (Collectibles c : liste) {
+      c.visLektier();
+    }
   }
 
   void collideDetection() {
-    c.collect();
+    for (Collectibles c : liste) {
+      if (s.xPos+100 >= c.collectXpos-50 && s.xPos+100 <= c.collectXpos+50 && s.yPos >= c.collectYpos-200 && c.collectFaaet == false) {
+        c.collectFaaet = true;
+        if (c.collectFaaet) {
+          samletCollect += 1;
+        }
+        c.visCollect = false;
+      }
+      println("Boolean visCollect "+c.visCollect);
+      println("Boolean collectFaaet "+c.collectFaaet);
+    }
   }
 }

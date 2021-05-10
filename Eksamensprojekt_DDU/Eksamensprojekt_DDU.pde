@@ -4,7 +4,7 @@ Fjender f = new Fjender();
 FjendeGenerator fg = new FjendeGenerator();
 Debug Debug = new Debug();
 Spiller s = new Spiller(400, 550, 100, 100);
-Collectibles c = new Collectibles();
+//Collectibles c = new Collectibles(2000,650);
 CollectiblesGenerator cg = new CollectiblesGenerator();
 WinLose wl = new WinLose();
 Menu m = new Menu();
@@ -23,6 +23,8 @@ int tyndekraftStartPos = 550;
 
 boolean tyndekraftAktiv = true;
 boolean tyndekraftBool = false;
+
+int samletCollect;
 
 void setup() {
   size(1600, 900);
@@ -62,7 +64,7 @@ void level() {
   noStroke();
   fill(112, 82, 0);
   b.tegnbaggrund();
-  text(c.samletCollect + "/10", 50, 50);
+  text(samletCollect + "/10", 50, 50);
 
   //Debug
   Debug.Debug();
@@ -87,11 +89,11 @@ void level() {
   s.maksHopHoejde();
 
   timer();
-  println("xpos " + s.xPos);
-  println("Collect xPos " + c.collectXpos);
-  println("ypos " + s.yPos);
-  println("Collect yPos " + c.collectYpos);
-  println(c.collectFaaet);
+  //println("xpos " + s.xPos);
+  //println("Collect xPos " + c.collectXpos);
+  //println("ypos " + s.yPos);
+  //println("Collect yPos " + c.collectYpos);
+  //println(c.collectFaaet);
   //println("Ob ypos " + o.obstacleYPos);
   //println("stribex " + b.stribeX);
   //println("tyndekraft " + tyndekraft);

@@ -4,14 +4,17 @@ class Collectibles {
   
   int collectXpos;
   int collectYpos;
-  int samletCollect;
 
   boolean visCollect = true;
   boolean collectFaaet = false;
 
+  Collectibles(int xPos, int yPos){
+    collectXpos = xPos;
+    collectYpos = yPos;
+  }
+
   void visLektier() {
-    collectXpos=b.screenMover+2000;
-    collectYpos=650;
+    collectXpos += b.screenMover;
     if (visCollect) {
       ellipse(collectXpos, collectYpos, 100, 100);
       text("Deez nuts", collectXpos, collectYpos, 20, 20);
