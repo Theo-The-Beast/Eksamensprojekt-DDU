@@ -1,11 +1,9 @@
 Background b = new Background(); //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
-FjendeGenerator fg = new FjendeGenerator();
 Debug Debug = new Debug();
 Spiller s = new Spiller(400, 550, 100, 100);
-//Collectibles c = new Collectibles(2000,650);
-CollectiblesGenerator cg = new CollectiblesGenerator();
+Collectibles c = new Collectibles();
 WinLose wl = new WinLose();
 Menu m = new Menu();
 Obstacles o = new Obstacles();
@@ -25,6 +23,8 @@ boolean tyndekraftAktiv = true;
 boolean tyndekraftBool = false;
 
 int samletCollect;
+
+int liv = 3;
 
 void setup() {
   size(1600, 900);
@@ -64,21 +64,21 @@ void level() {
   noStroke();
   fill(112, 82, 0);
   b.tegnbaggrund();
-  text(samletCollect + "/10", 50, 50);
+  text(samletCollect + "/3", 50, 50);
+  text(liv + "/3", 50, 100);
 
   //Debug
   Debug.Debug();
 
   //Fjender
-  fg.antalFjender(1);
-  fg.display();
-  fg.collideDetection();
+  f.tegnFjender();
+  f.collideFjender();
+  f.bevaegFjender();
 
   //Collectibles
-  cg.antalCollectibles(1);
-  cg.display();
-  cg.collideDetection();
-
+  c.visLektier();
+  c.collectColide();
+  
   //Obstacles
   o.visObstacle();
   o.collideObstacle();
@@ -89,6 +89,10 @@ void level() {
   s.maksHopHoejde();
 
   timer();
+  println(f.collideFjende);
+  //println("CollectXpos1: "+ c.collectXpos1);
+  //println("CollectXpos2: "+ c.collectXpos2);
+  //println("CollectXpos3: "+ c.collectXpos3);
   //println("xpos " + s.xPos);
   //println("Collect xPos " + c.collectXpos);
   //println("ypos " + s.yPos);

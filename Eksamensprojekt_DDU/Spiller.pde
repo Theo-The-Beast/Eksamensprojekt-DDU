@@ -42,7 +42,7 @@ class Spiller {
       b.personRykkerHojer = true;
     }
     //Angiver hvornår baggrund skal bevæge sig.
-    if (xPos < 150) {
+    if (xPos < 150 && b.screenMover < 0) {
       b.baggrundRykker = true;
       b.personRykkerVenstre = false;
       xSpeed = 0;
