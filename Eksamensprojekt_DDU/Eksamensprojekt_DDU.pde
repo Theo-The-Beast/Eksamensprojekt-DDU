@@ -58,6 +58,8 @@ void draw() {
   if (scene == 4) {
     wl.win();
   }
+  //Debug
+  Debug.Debug();
 }
 
 void level() { 
@@ -70,9 +72,6 @@ void level() {
   text(liv + "/3", 50, 100);
   text(point, 50, 150);
 
-  //Debug
-  Debug.Debug();
-
   //Fjender
   f.tegnFjender();
   f.collideFjender();
@@ -82,7 +81,7 @@ void level() {
   //Collectibles
   c.visLektier();
   c.collectColide();
-  
+
   //Obstacles
   o.visObstacle();
   o.collideObstacle();
@@ -105,7 +104,7 @@ void level() {
   //println("Ob ypos " + o.obstacleYPos);
   //println("stribex " + b.stribeX);
   //println("tyndekraft " + tyndekraft);
-  //println("tyndekraftStartPos " + tyndekraftStartPos);
+  println("tyndekraftStartPos " + tyndekraftStartPos);
   //println(s.hoppe);
   //println("Fjende ypos: " + f.fjenderYpos);
 

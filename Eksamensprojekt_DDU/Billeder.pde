@@ -12,6 +12,8 @@ class Billeder {
   PImage tree;
   PImage teacher;
   PImage lektier;
+  PImage stillads;
+  PImage bus;
 
   void loadBilleder() {
     //Vores mand 
@@ -37,5 +39,9 @@ class Billeder {
 
     //Collectibles
     lektier = loadImage("Lektier.png");
+    
+    //Obstacles
+    stillads = loadImage("stillads.png");
+    bus = loadImage("bus.png");
   }
 }

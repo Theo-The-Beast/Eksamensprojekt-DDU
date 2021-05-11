@@ -1,22 +1,44 @@
 class Obstacles {
-  int obstacleXPos;
-  int obstacleYPos;
-  int obstacleWidth = 400;
-  int ovstacleHeight = 50;
-
+  int obstacleXPosStillads;
+  int obstacleYPosStillads;
+  int obstacleXPosBus;
+  int obstacleYPosBus;
 
   void visObstacle() {
-    obstacleXPos = 600 + b.screenMover;
-    obstacleYPos = 450;
-    rect(obstacleXPos, obstacleYPos, obstacleWidth, ovstacleHeight);
+    //Stillads
+    obstacleXPosStillads = 560 + b.screenMover;
+    obstacleYPosStillads = 450;
+    image(pic.stillads, obstacleXPosStillads, obstacleYPosStillads);
+    
+    //Bus
+    obstacleXPosBus = 1100 + b.screenMover;
+    obstacleYPosBus = 500;
+    image(pic.bus, obstacleXPosBus, obstacleYPosBus);
   }
 
-  void collideObstacle() {                                                  /* 200 er billede højde*/        /* 190 er kalibrering */
-    if (s.xPos+100 >= obstacleXPos && s.xPos+100 <= obstacleXPos+obstacleWidth && s.yPos+200 >= obstacleYPos && s.yPos+190 <= obstacleYPos) {
-      tyndekraftStartPos = obstacleYPos-200;
+  void collideObstacle() {
+    //Stillads
+    if (s.xPos+100 >= obstacleXPosStillads && s.xPos+100 <= obstacleXPosStillads+430 && s.yPos+200 >= obstacleYPosStillads && s.yPos+190 <= obstacleYPosStillads) {
+      tyndekraftStartPos = obstacleYPosStillads-200;
       //println("Obstacle ramt");
     } else {
       tyndekraftStartPos = 550;
+    }
+    
+    //Bus
+    //Oppe på Bus
+    if (s.xPos+100 >= obstacleXPosBus+50 && s.xPos+100 <= obstacleXPosBus+400 && s.yPos+160 >= obstacleYPosBus && s.yPos+150 <= obstacleYPosBus) {
+      tyndekraftStartPos = obstacleYPosBus-160;
+      println("Stå på bus");
+    } else {
+      tyndekraftStartPos = 550;
+    }
+    
+    //Ikke igennem Bus
+    if (s.xPos >= obstacleXPosBus){
+      b.personRykkerHojer = true;
+      s.xSpeed = 0;
+      println();
     }
   }
 }
