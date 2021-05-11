@@ -1,4 +1,4 @@
-Background b = new Background(); //<>// //<>// //<>// //<>//
+Background b = new Background(); //<>// //<>// //<>// //<>// //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -24,7 +24,7 @@ boolean tyndekraftBool = false;
 
 int samletCollect;
 
-int liv = 3;
+int liv = 1;
 
 int point = 0;
 
