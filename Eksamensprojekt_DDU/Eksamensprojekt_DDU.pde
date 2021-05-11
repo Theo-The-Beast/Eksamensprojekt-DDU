@@ -104,7 +104,7 @@ void level() {
   //println("Ob ypos " + o.obstacleYPos);
   //println("stribex " + b.stribeX);
   //println("tyndekraft " + tyndekraft);
-  println("tyndekraftStartPos " + tyndekraftStartPos);
+  //println("tyndekraftStartPos " + tyndekraftStartPos);
   //println(s.hoppe);
   //println("Fjende ypos: " + f.fjenderYpos);
 

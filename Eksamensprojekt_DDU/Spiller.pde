@@ -3,8 +3,6 @@ class Spiller {
   float yPos;
   int w;
   int h;
-  int xSpeed;
-  int ySpeed;
   float hop = 1.0;
 
   boolean left = false;
@@ -16,8 +14,6 @@ class Spiller {
     yPos = tempY;
     w = tempW;
     h = tempH;
-    xSpeed = 0;
-    ySpeed = 0;
   }
 
   void tegnSpiller() {
@@ -37,7 +33,6 @@ class Spiller {
     if (xPos > 1250) {
       b.baggrundRykker = true;
       b.personRykkerHojer = false; 
-      xSpeed = 0;
     } else {
       b.personRykkerHojer = true;
     }
@@ -45,7 +40,6 @@ class Spiller {
     if (xPos < 150 && b.screenMover < 0) {
       b.baggrundRykker = true;
       b.personRykkerVenstre = false;
-      xSpeed = 0;
     } else {
       b.personRykkerVenstre = true;
     }

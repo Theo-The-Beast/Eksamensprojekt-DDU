@@ -9,7 +9,7 @@ class Obstacles {
     obstacleXPosStillads = 560 + b.screenMover;
     obstacleYPosStillads = 450;
     image(pic.stillads, obstacleXPosStillads, obstacleYPosStillads);
-    
+
     //Bus
     obstacleXPosBus = 1100 + b.screenMover;
     obstacleYPosBus = 500;
@@ -24,7 +24,7 @@ class Obstacles {
     } else {
       tyndekraftStartPos = 550;
     }
-    
+
     //Bus
     //Oppe på Bus
     if (s.xPos+100 >= obstacleXPosBus+50 && s.xPos+100 <= obstacleXPosBus+400 && s.yPos+160 >= obstacleYPosBus && s.yPos+150 <= obstacleYPosBus) {
@@ -33,12 +33,19 @@ class Obstacles {
     } else {
       tyndekraftStartPos = 550;
     }
-    
+
     //Ikke igennem Bus
-    if (s.xPos >= obstacleXPosBus){
-      b.personRykkerHojer = true;
-      s.xSpeed = 0;
-      println();
+    if (s.xPos >= obstacleXPosBus-70 && s.xPos <= obstacleXPosBus+150 && s.yPos+150 >= obstacleYPosBus && s.yPos-100 <= obstacleYPosBus) {
+      b.baggrundRykker = true;
+      b.personRykkerHojer = false;
+      s.xPos = s.xPos - 10;
+      println("Ikke igennem bus køre nu. Venstre side.");
+    }
+    if (s.xPos >= obstacleXPosBus+151 && s.xPos <= obstacleXPosBus+300 && s.yPos+150 >= obstacleYPosBus && s.yPos-100 <= obstacleYPosBus) {
+      b.baggrundRykker = true;
+      b.personRykkerVenstre = false;
+      s.xPos = s.xPos + 10;
+      println("Ikke igennem bus køre nu. Højre side.");
     }
   }
 }
