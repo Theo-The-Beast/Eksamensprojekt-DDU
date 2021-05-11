@@ -1,4 +1,4 @@
-Background b = new Background(); //<>// //<>// //<>//
+Background b = new Background(); //<>// //<>// //<>// //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -130,15 +130,15 @@ void mouseClicked() {
   if (scene == 0) {
     m.menuKlik();
   } else if (scene == 1) {
-    m.tilbageKnap();
+    
   } else if (scene == 2) {
-    m.tilbageKnap();
-  } /*else if (scene == 3) {
-   Lvl.level3Knap();
+   
+  }else if (scene == 3) {
+  
    } else if (scene == 4) {
-   m.tilbageKnap();
+   wl.winKnap();
    } else if (scene == 5) {
-   }*/
+   }
 }
 
 void vaegge() {
