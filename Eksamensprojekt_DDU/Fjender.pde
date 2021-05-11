@@ -27,6 +27,9 @@ class Fjender {
         visFjende = false;
       }
     }
+    if (liv == 0){
+      scene = 3;
+    }
   }
 
   void collideKillFjende() {
