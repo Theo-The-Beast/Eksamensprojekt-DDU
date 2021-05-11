@@ -16,8 +16,8 @@ class Collectibles {
 
   void visLektier() {
     //Collect 1
-    collectXpos1 = b.screenMover + 2000;
-    collectYpos1 = 650;
+    collectXpos1 = b.screenMover + 925;
+    collectYpos1 = 400;
     if (visCollect1) {
       image(pic.lektier,collectXpos1-50, collectYpos1-50);
       //ellipse(collectXpos1, collectYpos1, 100, 100);
@@ -42,7 +42,7 @@ class Collectibles {
 
   void collectColide() {
     //Collect 1
-    if (s.xPos+100 >= collectXpos1-50 && s.xPos+100 <= collectXpos1+50 && s.yPos >= collectYpos1-200 && collectFaaet1 == false) {
+    if (s.xPos+100 >= collectXpos1-50 && s.xPos+100 <= collectXpos1+50 && s.yPos >= collectYpos1-200 && s.yPos <= collectYpos1-142 && collectFaaet1 == false) {
       collectFaaet1 = true;
       if (collectFaaet1) {
         samletCollect += 1;
