@@ -42,7 +42,7 @@ class Collectibles {
 
   void collectColide() {
     //Collect 1
-    if (s.xPos+100 >= collectXpos1-50 && s.xPos+100 <= collectXpos1+50 && s.yPos >= collectYpos1-200 && s.yPos <= collectYpos1-142 && collectFaaet1 == false) {
+    if (s.xPos+100 >= collectXpos1-50 && s.xPos+100 <= collectXpos1+50 && s.yPos >= collectYpos1-200 && s.yPos <= collectYpos1-140 && collectFaaet1 == false) {
       collectFaaet1 = true;
       if (collectFaaet1) {
         samletCollect += 1;
