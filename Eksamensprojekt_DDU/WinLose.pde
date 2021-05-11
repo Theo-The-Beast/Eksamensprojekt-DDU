@@ -4,23 +4,27 @@ class WinLose {
   boolean lose;
 
   void win() {
-    textSize(64);
-    fill(random(0, 255), random(0, 255), random(0, 255));
+    //Background
+    image(pic.WB, 0, 0);
+
+    //Spilleren med diplom
+    image(pic.WinnerMario,590,380);
+    
+    //Anders og john
+    image(pic.GladJohn,400,550);
+    image(pic.GladAnders,970,550);
+    //Tekst
     textAlign(CENTER);
-    text("YOU WIN", 800, 200);
-    textAlign(LEFT);
-    fill(255);
-    textSize(32);
-
-    fill(255);
-    //Knapper
-    rect(675, 500, 250, 100);
-    rect(675, 650, 250, 100);
     fill(0);
-
-    text("Main Menu", 725, 561);
-    text("Exit", 765, 711);
+    textSize(64);
+    text("Tillykke du betod \nGymnasiet",800,200);
+    textAlign(LEFT);
+    
+    //Knapper
     fill(255);
+    rect(260, 780, 250, 100);
+    rect(660, 780, 250, 100);
+    rect(1060, 780, 250, 100);
   }
 
   void winKnap() {

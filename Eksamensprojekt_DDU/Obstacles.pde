@@ -11,7 +11,7 @@ class Obstacles {
     image(pic.stillads, obstacleXPosStillads, obstacleYPosStillads);
 
     //Bus
-    obstacleXPosBus = 1100 + b.screenMover;
+    obstacleXPosBus = 2000 + b.screenMover;
     obstacleYPosBus = 500;
     image(pic.bus, obstacleXPosBus, obstacleYPosBus);
   }

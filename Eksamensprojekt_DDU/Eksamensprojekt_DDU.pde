@@ -1,4 +1,4 @@
-Background b = new Background(); //<>//
+Background b = new Background(); //<>// //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();

@@ -14,16 +14,24 @@ class Billeder {
   PImage lektier;
   PImage stillads;
   PImage bus;
+  PImage WB;
+  PImage WinnerMario;
+  PImage GladAnders;
+  PImage GladJohn;
 
   void loadBilleder() {
     //Vores mand 
     mario = loadImage("Mario.png");
+    WinnerMario = loadImage("WinnerMario.png");
 
     //Ekstra materiale 
     skull = loadImage("skull.png");
     cloud = loadImage("cloud.png");
     tree = loadImage("tree.png");
-
+    WB = loadImage("winBackground.png");
+    GladAnders = loadImage("GladAnders.png");
+    GladJohn = loadImage("GladJohn.png");
+    
     //Stier
     path = loadImage("path.png");
     path2 = loadImage("path2.png");
