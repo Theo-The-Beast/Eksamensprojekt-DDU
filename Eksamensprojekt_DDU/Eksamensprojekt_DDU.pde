@@ -1,4 +1,4 @@
-Background b = new Background(); //<>// //<>// //<>// //<>// //<>//
+Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -14,7 +14,7 @@ int w2 = 142;
 int startTime = 0;
 int time = 0;
 
-int scene = 3;
+int scene = 0;
 
 float tyndekraft;
 int tyndekraftStartPos = 550;
