@@ -24,7 +24,7 @@ boolean tyndekraftBool = false;
 
 int samletCollect;
 
-int liv = 1;
+int liv = 3;
 
 int point = 0;
 
