@@ -14,7 +14,7 @@ int w2 = 142;
 int startTime = 0;
 int time = 0;
 
-int scene = 0;
+int scene = 3;
 
 float tyndekraft;
 int tyndekraftStartPos = 550;
@@ -68,10 +68,19 @@ void level() {
   noStroke();
   fill(112, 82, 0);
   b.tegnbaggrund();
-  text(samletCollect + "/3", 50, 50);
-  text(liv + "/3", 50, 100);
-  text(point, 50, 150);
-
+  
+  //Collectibles
+  text(samletCollect + "/3", 100, 50);
+  image(pic.lektier,160,25,30,30);
+  
+  //Liv
+  text(liv + "/3", 100, 100);
+  image(pic.liv,160,75);
+  //Point
+  textAlign(CENTER);
+  text(point, 800, 90);
+  textAlign(LEFT);
+  
   //Fjender
   f.tegnFjender();
   f.collideFjender();
@@ -130,15 +139,13 @@ void mouseClicked() {
   if (scene == 0) {
     m.menuKlik();
   } else if (scene == 1) {
-    
   } else if (scene == 2) {
-   
-  }else if (scene == 3) {
-  
-   } else if (scene == 4) {
-   wl.winKnap();
-   } else if (scene == 5) {
-   }
+  } else if (scene == 3) {
+    wl.loseKnap();
+  } else if (scene == 4) {
+    wl.winKnap();
+  } else if (scene == 5) {
+  }
 }
 
 void vaegge() {

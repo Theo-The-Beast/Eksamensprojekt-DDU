@@ -16,13 +16,18 @@ class Billeder {
   PImage bus;
   PImage WB;
   PImage WinnerMario;
+  PImage TristeMario;
   PImage GladAnders;
   PImage GladJohn;
+   PImage SurAnders;
+  PImage SurJohn;
+  PImage liv;
 
   void loadBilleder() {
     //Vores mand 
     mario = loadImage("Mario.png");
     WinnerMario = loadImage("WinnerMario.png");
+    TristeMario = loadImage("TristeMario.png");
 
     //Ekstra materiale 
     skull = loadImage("skull.png");
@@ -31,6 +36,9 @@ class Billeder {
     WB = loadImage("winBackground.png");
     GladAnders = loadImage("GladAnders.png");
     GladJohn = loadImage("GladJohn.png");
+    SurAnders = loadImage("SurAnders.png");
+    SurJohn = loadImage("SurJohn.png");
+    liv = loadImage("liv.png");
     
     //Stier
     path = loadImage("path.png");
