@@ -26,6 +26,8 @@ int samletCollect;
 
 int liv = 3;
 
+int point = 0;
+
 void setup() {
   size(1600, 900);
   frameRate(60);
@@ -66,6 +68,7 @@ void level() {
   b.tegnbaggrund();
   text(samletCollect + "/3", 50, 50);
   text(liv + "/3", 50, 100);
+  text(point, 50, 150);
 
   //Debug
   Debug.Debug();
@@ -73,6 +76,7 @@ void level() {
   //Fjender
   f.tegnFjender();
   f.collideFjender();
+  f.collideKillFjende();
   f.bevaegFjender();
 
   //Collectibles
@@ -89,7 +93,7 @@ void level() {
   s.maksHopHoejde();
 
   timer();
-  println(f.collideFjende);
+  //println(f.collideFjende);
   //println("CollectXpos1: "+ c.collectXpos1);
   //println("CollectXpos2: "+ c.collectXpos2);
   //println("CollectXpos3: "+ c.collectXpos3);
@@ -103,6 +107,7 @@ void level() {
   //println("tyndekraft " + tyndekraft);
   //println("tyndekraftStartPos " + tyndekraftStartPos);
   //println(s.hoppe);
+  //println("Fjende ypos: " + f.fjenderYpos);
 
   //Tilbage knap
   rect(20, 20, 30, 30);

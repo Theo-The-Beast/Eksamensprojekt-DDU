@@ -43,6 +43,7 @@ class Collectibles {
       collectFaaet1 = true;
       if (collectFaaet1) {
         samletCollect += 1;
+        point += 200;
       }
       visCollect1 = false;
     }
@@ -52,6 +53,7 @@ class Collectibles {
       collectFaaet2 = true;
       if (collectFaaet2) {
         samletCollect += 1;
+        point += 200;
       }
       visCollect2 = false;
     }
@@ -61,6 +63,7 @@ class Collectibles {
       collectFaaet3 = true;
       if (collectFaaet3) {
         samletCollect += 1;
+        point += 200;
       }
       visCollect3 = false;
     }

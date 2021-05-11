@@ -19,10 +19,20 @@ class Fjender {
 
   void collideFjender() {
     if (visFjende) {
-      if (s.xPos+100 >= fjenderXpos /*50 er bredde*/ && s.xPos+100 <= fjenderXpos+100 && s.yPos+100 >= fjenderYpos) {
+      if (s.xPos+100 >= fjenderXpos /*50 er bredde*/ && s.xPos+100 <= fjenderXpos+100 && s.yPos+100 >= fjenderYpos-79 && s.yPos+100 <= fjenderYpos+10) {
         println("Fjende Ramt");
         liv = liv - 1;
         visFjende = false;
+      }
+    }
+  }
+
+  void collideKillFjende() {
+    if (visFjende) {
+      if (s.xPos+100 >= fjenderXpos /*50 er bredde*/ && s.xPos+100 <= fjenderXpos+100 && s.yPos+100 >= fjenderYpos-100 && s.yPos+100 <= fjenderYpos-80) {
+        println("Kill Fjende");
+        visFjende = false;
+        point += 100;
       }
     }
   }
