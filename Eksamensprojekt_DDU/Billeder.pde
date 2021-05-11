@@ -10,6 +10,8 @@ class Billeder {
   PImage path2;
   PImage path3;
   PImage tree;
+  PImage teacher;
+  PImage lektier;
 
   void loadBilleder() {
     //Vores mand 
@@ -29,5 +31,11 @@ class Billeder {
     hus = loadImage("Hus.png");
     hotel = loadImage("hotel.png");
     church = loadImage("church.png");
+
+    //Fjende
+    teacher = loadImage("Teacher.png");
+
+    //Collectibles
+    lektier = loadImage("Lektier.png");
   }
 }

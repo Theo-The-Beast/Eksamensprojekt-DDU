@@ -10,7 +10,8 @@ class Fjender {
     fjenderXpos = 1600 + b.screenMover;
     fjenderYpos = 650;
     if (visFjende) {
-      rect(fjenderXpos, fjenderYpos, 100, 100);
+      image(pic.teacher,fjenderXpos,fjenderYpos);
+      //rect(fjenderXpos, fjenderYpos, 100, 100);
     }
   }
 
@@ -21,6 +22,7 @@ class Fjender {
     if (visFjende) {
       if (s.xPos+100 >= fjenderXpos /*50 er bredde*/ && s.xPos+100 <= fjenderXpos+100 && s.yPos+100 >= fjenderYpos-79 && s.yPos+100 <= fjenderYpos+10) {
         println("Fjende Ramt");
+        point -= 100;
         liv = liv - 1;
         visFjende = false;
       }

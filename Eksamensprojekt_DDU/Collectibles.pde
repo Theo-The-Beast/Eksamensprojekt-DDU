@@ -19,21 +19,24 @@ class Collectibles {
     collectXpos1 = b.screenMover + 2000;
     collectYpos1 = 650;
     if (visCollect1) {
-      ellipse(collectXpos1, collectYpos1, 100, 100);
+      image(pic.lektier,collectXpos1-50, collectYpos1-50);
+      //ellipse(collectXpos1, collectYpos1, 100, 100);
     }
 
     //Collect 2
     collectXpos2 = b.screenMover + 4000;
     collectYpos2 = 650;
     if (visCollect2) {
-      ellipse(collectXpos2, collectYpos2, 100, 100);
+      image(pic.lektier,collectXpos2-50, collectYpos2-50);
+      //ellipse(collectXpos2, collectYpos2, 100, 100);
     }
 
     //Collect 3
     collectXpos3 = b.screenMover + 6000;
     collectYpos3 = 650;
     if (visCollect3) {
-      ellipse(collectXpos3, collectYpos3, 100, 100);
+      image(pic.lektier,collectXpos3-50, collectYpos3-50);
+      //ellipse(collectXpos3, collectYpos3, 100, 100);
     }
   }
 
