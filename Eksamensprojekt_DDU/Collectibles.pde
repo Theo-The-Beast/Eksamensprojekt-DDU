@@ -52,7 +52,7 @@ class Collectibles {
     }
 
     //Collect 2
-    if (s.xPos+100 >= collectXpos2-50 && s.xPos+100 <= collectXpos2+50 && s.yPos >= collectYpos2-200 && collectFaaet2 == false) {
+    if (s.xPos+100 >= collectXpos2-50 && s.xPos+100 <= collectXpos2+50 && s.yPos >= collectYpos2-200 && s.yPos <= collectYpos2-50 && collectFaaet2 == false) {
       collectFaaet2 = true;
       if (collectFaaet2) {
         samletCollect += 1;
