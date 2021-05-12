@@ -206,7 +206,7 @@ class Obstacles {
     
     //Slutter spillet når man rammer bunden af hullet.
     if (s.yPos+50 >= height){
-      liv = 0;
+      scene = 6;
     }
   }
 }

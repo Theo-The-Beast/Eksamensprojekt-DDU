@@ -57,15 +57,18 @@ class Menu {
     textSize(64);
     text("Velkommen til XXX\n", 800, 150);
     textSize(32);
-    text("Reglerne i Plagiat Simulator 2021 går ud på at du skal bestå gymnasiet\n uden at blive taget for plagiat. Det gør du ved at samle alle nørdernes opgaver \n og nå til skolen uden at få 3 advarsler.", 800, 250);
+    text("Reglerne i Plagiat Simulator 2021 går ud på at du skal bestå gymnasiet\n uden at blive taget for plagiat. Det gør du ved at samle alle nørdernes opgaver \n og nå til skolen uden at få 3 advarsler, \n eller ryge i et fraværshul.", 800, 230);
     textSize(50);
-    text("Styring: \nVenstre: ←   Hop: ↑   Højre: → ", 790, 750);
+    text("Styring: \nVenstre: ←   Hop: ↑   Højre: → ", 790, 760);
     textSize(18);
 
     image(pic.lektier, 450, 400);
     text("= Opgaver... Du skal samle 3 af disse for at vinde", 800, 450);
-    image(pic.liv, 460, 550, 80, 80);
-    text("= Advarsler... Hvis du får 3 advarsler har du tabt", 795, 600);
+    image(pic.liv, 460, 530, 80, 80);
+    text("= Advarsler... Hvis du får 3 advarsler har du tabt", 795, 580);
+    image(pic.HulSkilt,475,630,50,90);
+    text("= Fraværshul... Falder du i et fraværshul har du tabt", 810, 660);
+    
     textSize(32);
     textAlign(LEFT);
 
