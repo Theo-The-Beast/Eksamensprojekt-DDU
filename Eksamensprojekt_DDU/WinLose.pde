@@ -18,8 +18,6 @@ image(pic.SkoleSkilt,8450+b.screenMover,520);
 
 }
 
-
-
   void win() {
     //Background
     image(pic.WB, 0, 0);
@@ -129,5 +127,38 @@ image(pic.SkoleSkilt,8450+b.screenMover,520);
     if (mouseX >=1060 && mouseX <= 1310 && mouseY >= 780 && mouseY <= 880) {
       exit();
     }
+  }
+   
+   void loseTilHul() {
+    //Background
+    image(pic.WB, 0, 0);
+
+    //Triste Mario
+    image(pic.TristeMario, 590, 380);
+
+    //Anders og john
+    image(pic.SurJohn, 400, 550);
+    image(pic.SurAnders, 970, 550);
+
+    //Tekst
+    textAlign(CENTER);
+    fill(0);
+    textSize(64);
+    text("Du er røget i fraværshullet \n og er blevet bortvist ", 800, 100);
+    textAlign(LEFT);
+
+    //Knapper
+    fill(255);
+    rect(260, 780, 250, 100);
+    rect(660, 780, 250, 100);
+    rect(1060, 780, 250, 100);
+
+    //Tekst til knapper
+    fill(0);
+    textSize(32);
+    text("Prøv igen", 310, 840);
+    text("Main Menu", 700, 840);
+    text("Quit", 1150, 840);
+    fill(255);
   }
 }

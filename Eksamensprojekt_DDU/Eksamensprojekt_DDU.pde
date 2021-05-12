@@ -98,6 +98,9 @@ void draw() {
       m.tilbageKnap();
     }
   }
+   if (scene == 6) {
+    wl.loseTilHul();
+  }
   //Debug
   Debug.Debug();
 }
