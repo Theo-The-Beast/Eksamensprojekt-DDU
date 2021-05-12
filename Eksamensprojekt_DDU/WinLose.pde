@@ -3,6 +3,12 @@ class WinLose {
   boolean win;
   boolean lose;
 
+void molstreg(){
+
+  
+}
+
+
   void win() {
     //Background
     image(pic.WB, 0, 0);

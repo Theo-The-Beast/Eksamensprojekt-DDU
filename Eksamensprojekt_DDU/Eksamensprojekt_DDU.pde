@@ -125,7 +125,7 @@ void level() {
   f.tegnFjender();
   f.collideFjender();
   f.collideKillFjende();
-  f.bevaegFjender();
+
 
   //Collectibles
   c.visLektier();
