@@ -14,7 +14,7 @@ if(s.xPos >= 8750+ b.screenMover && samletCollect == 3){
 scene = 4;
 }
 
-image(pic.SkoleSkilt,8300+b.screenMover,500);
+image(pic.SkoleSkilt,8450+b.screenMover,520);
 
 }
 
