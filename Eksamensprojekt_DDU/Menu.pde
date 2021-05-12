@@ -1,6 +1,7 @@
 class Menu {
 
   void display() {
+    image(pic.WB, 0, 0);
     //knapper
     rect(675, 350, 250, 100);
     rect(675, 500, 250, 100);
@@ -14,7 +15,9 @@ class Menu {
     text("Exit", 765, 711);
     textSize(64);
     fill(240, 240, 196);
-    text("Desert Warfare", 575, 200);
+    textAlign(CENTER);
+    text("Plagiat Simulator 2021", 800, 200);
+    textAlign(NORMAL);
     textSize(32);  
     fill(255);
   }
