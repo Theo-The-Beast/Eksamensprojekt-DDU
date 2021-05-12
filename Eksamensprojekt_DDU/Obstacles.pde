@@ -203,5 +203,10 @@ class Obstacles {
     if (s.xPos+100 > obstacleXPosHul4-10 && s.xPos+100 <= obstacleXPosHul4+10 && s.yPos > 650-100) { 
       s.xPos = s.xPos + 10;
     }
+    
+    //Slutter spillet når man rammer bunden af hullet.
+    if (s.yPos+50 >= height){
+      liv = 0;
+    }
   }
 }
