@@ -4,9 +4,20 @@ class WinLose {
   boolean lose;
 
 void molstreg(){
+  if(samletCollect == 3){
+  image(pic.SkoleOpen,8500 + b.screenMover,260);
+  }else{
+   image(pic.SkoleLukket,8500 + b.screenMover,260);
+  }
 
-  
+if(s.xPos >= 8750+ b.screenMover && samletCollect == 3){
+scene = 4;
 }
+
+image(pic.SkoleSkilt,8300+b.screenMover,500);
+
+}
+
 
 
   void win() {

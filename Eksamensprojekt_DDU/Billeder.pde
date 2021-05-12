@@ -30,6 +30,8 @@ class Billeder {
   PImage BilShrek;
   PImage Board;
   PImage BoardWin;
+  PImage SkoleSkilt;
+  PImage HulSkilt;
   
 
   void loadBilleder() {
@@ -50,6 +52,8 @@ class Billeder {
     liv = loadImage("liv.png");
     Board = loadImage("Board.png");
     BoardWin = loadImage("BoardWin.png");
+    SkoleSkilt = loadImage("SkoleSkilt.png");
+    HulSkilt = loadImage("HulSkilt.png");
 
     //Stier
     path = loadImage("path.png");

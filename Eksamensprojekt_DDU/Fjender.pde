@@ -49,7 +49,7 @@ class Fjender {
     }
     
     // Fjende 4
-    fjenderXpos4 = 7910 + b.screenMover;
+    fjenderXpos4 = 6710 + b.screenMover;
     fjenderYpos4 = 650;
     if (visFjende4) {
       image(pic.teacher, fjenderXpos4, fjenderYpos4);
@@ -57,7 +57,7 @@ class Fjender {
     }
     
     // Fjende 5
-    fjenderXpos5 = 9510 + b.screenMover;
+    fjenderXpos5 = 8100 + b.screenMover;
     fjenderYpos5 = 650;
     if (visFjende5) {
       image(pic.teacher, fjenderXpos5, fjenderYpos5);

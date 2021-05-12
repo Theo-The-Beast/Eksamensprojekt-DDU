@@ -20,7 +20,8 @@ int w = 1258;
 int w2 = 142;
 
 int startTime = 0;
-int time = 0;
+float time = 0;
+
 
 int scene = 0;
 
@@ -72,7 +73,7 @@ void draw() {
 
   if (scene == 2) {
     m.regler();
-    
+
     if (mousePressed) {
       m.tilbageKnap();
     }
@@ -84,7 +85,7 @@ void draw() {
 
   if (scene == 4) {
     wl.win();
-    
+
     if (check) {
       hs.saveCSV(t);
       check = false;
@@ -92,7 +93,7 @@ void draw() {
   }
   if (scene == 5) {
     m.visHighScore();
-    
+
     if (mousePressed) {
       m.tilbageKnap();
     }
@@ -107,8 +108,12 @@ void level() {
   noStroke();
   fill(112, 82, 0);
   b.tegnbaggrund();
+  
 
   //Collectibles
+  fill(155,155,155);
+  //ellipse(142,67, 130,130);
+  fill(118,118,118);
   text(samletCollect + "/3", 100, 50);
   image(pic.lektier, 160, 25, 30, 30);
 
@@ -118,14 +123,17 @@ void level() {
   //Point
   textAlign(CENTER);
   textSize(50);
+  fill(118,118,118);
+  //ellipse(800,45,150,70);
+  fill(155,155,155);
   text(point, 800, 60);
   textAlign(LEFT);
 
   //Fjender
-  f.tegnFjender();
+
   f.collideFjender();
   f.collideKillFjende();
-
+  f.tegnFjender();
 
   //Collectibles
   c.visLektier();
@@ -134,6 +142,7 @@ void level() {
   //Obstacles
   o.visObstacle();
   o.collideObstacle();
+
 
   //indsæt spilleren
   s.tegnSpiller();
@@ -166,6 +175,7 @@ void level() {
   if (mousePressed) {
     m.tilbageKnap();
   }
+  wl.molstreg();
 }
 
 void keyPressed() {
@@ -220,7 +230,12 @@ void ingenTyndekraft() {
 }
 
 void timer() {
-  time = millis()/1000 - startTime;
+  time += 1/frameRate;
   textSize(32);
-  text(time, 1500, 100);
+  fill(155,155,155);
+ // ellipse(1529,65,80,50);
+  fill(118,118,118);
+  text(round(300-time), 1500, 75);
+  fill(255);
+  
 }
