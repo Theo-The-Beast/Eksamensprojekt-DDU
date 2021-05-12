@@ -44,18 +44,28 @@ class Menu {
     }
   }
 
-  void regler() {
-    textAlign(CENTER);
-    textSize(64);
-    text("Velkommen til Desert Warfare\n", 800, 150);
-    textSize(32);
-    text("Reglerne er rimelig simple.\n Spillet går ud på at ramme bolden med din paddel og \n slå den tilbage mod din modstander. \n Dette bliver ved indtil du, eller computeren misser, \n hvor du så enten går videre til næste level eller taber. \n\n\n\n Styring:\n Ryk op: Pil op\n Ryk ned: Pil ned ", 800, 250);
-    textAlign(LEFT);
+    void regler() {
+      textAlign(CENTER);
+      textSize(64);
+      text("Velkommen til XXX\n", 800, 150);
+      textSize(32);
+      text("Reglerne i Plagiat Simulator 2021 går ud på at du skal bestå gymnasiet\n uden at blive taget for plagiat. Det gør du ved at samle alle nørdernes opgaver \n og nå til skolen uden at få 3 advarsler.", 800, 250);
+      textSize(50);
+      text("Styring: \nVenstre: ←   Hop: ↑   Højre: → ", 790, 750);
+      textSize(18);
 
-    //Tilbage knap
-    rect(20, 20, 30, 30);
-    fill(0);
-    text("<", 20, 44);
-    fill(255);
+      image(pic.lektier, 450, 400);
+      text("= Opgaver... Du skal samle 3 af disse for at vinde", 800, 450);
+      image(pic.liv, 460, 550, 80, 80);
+      text("= Advarsler... Hvis du får 3 advarsler har du tabt", 795, 600);
+      textSize(32);
+      textAlign(LEFT);
+
+
+      //Tilbage knap
+      rect(20, 20, 30, 30);
+      fill(0);
+      text("<", 20, 44);
+      fill(255);
+    }
   }
-}
