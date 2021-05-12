@@ -1,6 +1,10 @@
 class Obstacles {
+
+  //Stillads Forhindring
   int obstacleXPosStillads;
   int obstacleYPosStillads;
+
+  //Køretøj Forhindringer
   int obstacleXPosBus;
   int obstacleYPosBus;
   int obstacleXPosBilRod;
@@ -11,6 +15,16 @@ class Obstacles {
   int obstacleYPosBilPink;
   int obstacleXPosBilShrek;
   int obstacleYPosBilShrek;
+
+  // Hul Forhindringer
+  int obstacleXPosHul1;
+  int obstacleYPosHul1;
+  int obstacleXPosHul2;
+  int obstacleYPosHul2;
+  int obstacleXPosHul3;
+  int obstacleYPosHul3;
+  int obstacleXPosHul4;
+  int obstacleYPosHul4;
 
   void visObstacle() {
     //Stillads
@@ -32,16 +46,44 @@ class Obstacles {
     obstacleXPosBilLilla = 5000 + b.screenMover;
     obstacleYPosBilLilla = 620;
     image(pic.BilLilla, obstacleXPosBilLilla, obstacleYPosBilLilla);
-    
+
     //Pink Bil
     obstacleXPosBilPink = 6000 + b.screenMover;
     obstacleYPosBilPink = 620;
     image(pic.BilPink, obstacleXPosBilPink, obstacleYPosBilPink);
-    
+
     //Shrek Bil
     obstacleXPosBilShrek = 7500 + b.screenMover;
     obstacleYPosBilShrek = 620;
     image(pic.BilShrek, obstacleXPosBilShrek, obstacleYPosBilShrek);
+
+    //Hul i jorden 1.
+    obstacleXPosHul1 = 1250 + b.screenMover ;
+    obstacleYPosHul1 = 700;
+    fill(0);
+    rect(obstacleXPosHul1, obstacleYPosHul1, 150, 200);
+    fill(255);
+
+    //Hul i jorden 2.
+    obstacleXPosHul2 = 3000 + b.screenMover ;
+    obstacleYPosHul2 = 700;
+    fill(0);
+    rect(obstacleXPosHul2, obstacleYPosHul2, 150, 200);
+    fill(255);
+
+    //Hul i jorden 3.
+    obstacleXPosHul3 = 4250 + b.screenMover ;
+    obstacleYPosHul3 = 700;
+    fill(0);
+    rect(obstacleXPosHul3, obstacleYPosHul3, 150, 200);
+    fill(255);
+
+    //Hul i jorden 4.
+    obstacleXPosHul4 = 6750 + b.screenMover ;
+    obstacleYPosHul4 = 700;
+    fill(0);
+    rect(obstacleXPosHul4, obstacleYPosHul4, 150, 200);
+    fill(255);
   }
 
   void collideObstacle() {
@@ -110,6 +152,51 @@ class Obstacles {
       s.xPos = s.xPos - 10;
     }
     if (s.xPos+100 >= obstacleXPosBilShrek+101 && s.xPos+100 <= obstacleXPosBilShrek+200 && s.yPos+190 >= obstacleYPosBilShrek && s.yPos+40 <= obstacleYPosBilShrek) {
+      s.xPos = s.xPos + 10;
+    }
+
+    //Huller
+    //Hul 1
+    if (s.xPos+100 >= obstacleXPosHul1 && s.xPos+100 <= obstacleXPosHul1+150) {
+      tyndekraftStartPos = height;
+    }
+    if (s.xPos+100 > obstacleXPosHul1+140 && s.xPos+100 <= obstacleXPosHul1+160 && s.yPos > 650-100) {
+      s.xPos = s.xPos - 10;
+    }
+    if (s.xPos+100 > obstacleXPosHul1-10 && s.xPos+100 <= obstacleXPosHul1+10 && s.yPos > 650-100) {
+      s.xPos = s.xPos + 10;
+    }
+
+    //Hul 2
+    if (s.xPos+100 >= obstacleXPosHul2 && s.xPos+100 <= obstacleXPosHul2+150) {
+      tyndekraftStartPos = height;
+    }
+    if (s.xPos+100 > obstacleXPosHul2+140 && s.xPos+100 <= obstacleXPosHul2+160 && s.yPos > 650-100) {
+      s.xPos = s.xPos - 10;
+    }
+    if (s.xPos+100 > obstacleXPosHul2-10 && s.xPos+100 <= obstacleXPosHul2+10 && s.yPos > 650-100) {
+      s.xPos = s.xPos + 10;
+    }
+
+    //Hul 3
+    if (s.xPos+100 >= obstacleXPosHul3 && s.xPos+100 <= obstacleXPosHul3+150) {
+      tyndekraftStartPos = height;
+    }
+    if (s.xPos+100 > obstacleXPosHul3+140 && s.xPos+100 <= obstacleXPosHul3+160 && s.yPos > 650-100) {
+      s.xPos = s.xPos - 10;
+    }
+    if (s.xPos+100 > obstacleXPosHul3-10 && s.xPos+100 <= obstacleXPosHul3+10 && s.yPos > 650-100) {
+      s.xPos = s.xPos + 10;
+    }
+
+    //Hul 4
+    if (s.xPos+100 >= obstacleXPosHul4 && s.xPos+100 <= obstacleXPosHul4+150) {
+      tyndekraftStartPos = height;
+    }
+    if (s.xPos+100 > obstacleXPosHul4+140 && s.xPos+100 <= obstacleXPosHul4+160 && s.yPos > 650-100) {
+      s.xPos = s.xPos - 10;
+    }
+    if (s.xPos+100 > obstacleXPosHul4-10 && s.xPos+100 <= obstacleXPosHul4+10 && s.yPos > 650-100) { 
       s.xPos = s.xPos + 10;
     }
   }
