@@ -23,6 +23,8 @@ class Highscore {
   }
   
   void forberedHighScore(){
+   
+    // VIS HIGHSCORENE 
     HighScores.clear();
    for (TableRow row : t.rows()) {
       HighScores.append(row.getInt("HighScore")); 

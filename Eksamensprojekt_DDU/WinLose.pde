@@ -20,6 +20,21 @@ class WinLose {
     textSize(64);
     text("Tillykke du bestod \nGymnasiet", 800, 200);
     textAlign(LEFT);
+    fill(255);
+    
+    //HIGHSCORE TAVLE
+    image(pic.BoardWin, 1300, 75);
+    textSize(25);
+    text("HIGH SCORES",1320,110);
+    text("1. \n2. \n3. \n4. \n5. ", 1340, 185);
+    textSize(18);
+    HighScores.sortReverse();
+    for (int i = 0; i< HighScores.size(); i++) {
+      text(HighScores.get(i), 1410, 180+(i*40));
+      if (i>=4) {
+        break;
+      }
+    }
 
     //Knapper
     fill(255);

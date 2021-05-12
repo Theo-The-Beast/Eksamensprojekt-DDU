@@ -1,10 +1,6 @@
-<<<<<<< Updated upstream
-Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
-=======
-import java.util.*; //<>//
+import java.util.*; //<>// //<>//
 
 Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>//
->>>>>>> Stashed changes
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -46,23 +42,18 @@ void setup() {
   size(1600, 900);
   frameRate(60);
   pic.loadBilleder();
-  
+
   File fil = dataFile("new.csv"); 
 
-String filepath = fil.getPath();
-boolean exist = fil.isFile();
+  String filepath = fil.getPath();
+  boolean exist = fil.isFile();
 
-
-  
-println(filepath,exist);
-  
   if (exist) {
     t = hs.loadCSV(t);
-    println("theo hee fortnite");
   } else {
     hs.lavCSV();
   }
-  
+
   hs.forberedHighScore();
 }
 
@@ -80,8 +71,8 @@ void draw() {
   }
 
   if (scene == 2) {
-    //m.regler();
-    m.visHighScore();
+    m.regler();
+    
     if (mousePressed) {
       m.tilbageKnap();
     }
@@ -93,9 +84,17 @@ void draw() {
 
   if (scene == 4) {
     wl.win();
+    
     if (check) {
       hs.saveCSV(t);
       check = false;
+    }
+  }
+  if (scene == 5) {
+    m.visHighScore();
+    
+    if (mousePressed) {
+      m.tilbageKnap();
     }
   }
   //Debug
