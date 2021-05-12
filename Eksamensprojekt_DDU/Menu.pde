@@ -14,7 +14,7 @@ class Menu {
     text("Rules", 765, 561);
     text("Exit", 765, 711);
     textSize(64);
-    fill(240, 240, 196);
+    fill(0);
     textAlign(CENTER);
     text("Plagiat Simulator 2021", 800, 200);
     textAlign(NORMAL);

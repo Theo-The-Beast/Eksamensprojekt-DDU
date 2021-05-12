@@ -1,4 +1,4 @@
-Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>//
+Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -49,6 +49,9 @@ void draw() {
 
   if (scene == 2) {
     m.regler();
+    if (mousePressed) {
+      m.tilbageKnap();
+    }
   }
 
   if (scene == 3) {
@@ -124,6 +127,9 @@ void level() {
   rect(28, 22, 4, 26);
   rect(38, 22, 4, 26);
   fill(255);
+  if (mousePressed) {
+    m.tilbageKnap();
+  }
 }
 
 void keyPressed() {
