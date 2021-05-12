@@ -10,7 +10,7 @@ class Fjender {
     fjenderXpos = 1600 + b.screenMover;
     fjenderYpos = 650;
     if (visFjende) {
-      image(pic.teacher,fjenderXpos,fjenderYpos);
+      image(pic.teacher, fjenderXpos, fjenderYpos);
       //rect(fjenderXpos, fjenderYpos, 100, 100);
     }
   }
@@ -27,7 +27,7 @@ class Fjender {
         visFjende = false;
       }
     }
-    if (liv == 0){
+    if (liv == 0) {
       scene = 3;
     }
   }

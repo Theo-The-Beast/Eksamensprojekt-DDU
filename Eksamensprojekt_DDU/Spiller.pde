@@ -32,7 +32,7 @@ class Spiller {
     //Angiver hvornår baggrund skal bevæge sig.
     if (xPos > 1250) {
       b.baggrundRykker = true;
-      b.personRykkerHojer = false; 
+      b.personRykkerHojer = false;
     } else {
       b.personRykkerHojer = true;
     }
@@ -49,12 +49,12 @@ class Spiller {
     if (yPos <= 150) {
       hoppe = false;
     }
-      if (hoppe) {
-        hop = 0.96;
-      } else {
-        hop = 1.0;
-      }
+    if (hoppe) {
+      hop = 0.96;
+    } else {
+      hop = 1.0;
     }
+  }
 
   void spillerHopPress() {
     if (keyCode == UP && hoppe == false && yPos >= tyndekraftStartPos || keyCode == 32 && hoppe == false && yPos >= tyndekraftStartPos) {
