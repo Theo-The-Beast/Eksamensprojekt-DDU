@@ -28,6 +28,7 @@ class Billeder {
   PImage BilLilla;
   PImage BilPink;
   PImage BilShrek;
+  PImage Board;
   
 
   void loadBilleder() {
@@ -46,6 +47,7 @@ class Billeder {
     SurAnders = loadImage("SurAnders.png");
     SurJohn = loadImage("SurJohn.png");
     liv = loadImage("liv.png");
+    Board = loadImage("Board.png");
 
     //Stier
     path = loadImage("path.png");

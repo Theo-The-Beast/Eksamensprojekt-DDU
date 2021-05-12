@@ -45,6 +45,7 @@ class Menu {
   }
 
     void regler() {
+      image(pic.Board,0,0);
       textAlign(CENTER);
       textSize(64);
       text("Velkommen til XXX\n", 800, 150);
