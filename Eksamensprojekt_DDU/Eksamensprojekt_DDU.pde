@@ -1,6 +1,6 @@
-import java.util.*; //<>// //<>//
+import java.util.*; //<>// //<>// //<>//
 
-Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -13,29 +13,26 @@ Highscore hs = new Highscore();
 
 IntList HighScores = new IntList(5); 
 
-boolean check = true;
-
 Table t  = new Table();
-int w = 1258;
-int w2 = 142;
 
-int startTime = 0;
-float time = 0;
-
-
-int scene = 0;
-
-float tyndekraft;
-int tyndekraftStartPos = 550;
-
+boolean check = true;
+boolean timeAktiv = false;
 boolean tyndekraftAktiv = true;
 boolean tyndekraftBool = false;
 
+int w = 1258;
+int w2 = 142;
+
+float time = 0;
+float tyndekraft;
+
+int startTime = 0;
+int tyndekraftStartPos = 550;
+int scene = 0;
 int samletCollect;
-
 int liv = 3;
-
 int point = 0;
+int visTid;
 
 
 // SÆT CHECK TIL TRUE NÅR VI RESTARTER
@@ -85,7 +82,7 @@ void draw() {
 
   if (scene == 4) {
     wl.win();
-
+    hs.endeligScore();
     if (check) {
       hs.saveCSV(t);
       check = false;
@@ -108,12 +105,13 @@ void level() {
   noStroke();
   fill(112, 82, 0);
   b.tegnbaggrund();
-  
+  timeAktiv = true;
+
 
   //Collectibles
-  fill(155,155,155);
+  fill(155, 155, 155);
   //ellipse(142,67, 130,130);
-  fill(118,118,118);
+  fill(118, 118, 118);
   text(samletCollect + "/3", 100, 50);
   image(pic.lektier, 160, 25, 30, 30);
 
@@ -123,9 +121,9 @@ void level() {
   //Point
   textAlign(CENTER);
   textSize(50);
-  fill(118,118,118);
+  fill(118, 118, 118);
   //ellipse(800,45,150,70);
-  fill(155,155,155);
+  fill(155, 155, 155);
   text(point, 800, 60);
   textAlign(LEFT);
 
@@ -230,12 +228,14 @@ void ingenTyndekraft() {
 }
 
 void timer() {
-  time += 1/frameRate;
+  if (timeAktiv) {
+    time += 1/frameRate;
+    visTid = round(300-time);
+  }
   textSize(32);
-  fill(155,155,155);
- // ellipse(1529,65,80,50);
-  fill(118,118,118);
-  text(round(300-time), 1500, 75);
+  fill(155, 155, 155);
+  // ellipse(1529,65,80,50);
+  fill(118, 118, 118);
+  text(visTid, 1500, 75);
   fill(255);
-  
 }
