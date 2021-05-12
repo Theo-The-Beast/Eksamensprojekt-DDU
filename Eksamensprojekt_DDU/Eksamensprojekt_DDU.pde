@@ -1,4 +1,10 @@
+<<<<<<< Updated upstream
 Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+=======
+import java.util.*; //<>//
+
+Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+>>>>>>> Stashed changes
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -7,7 +13,13 @@ Collectibles c = new Collectibles();
 WinLose wl = new WinLose();
 Menu m = new Menu();
 Obstacles o = new Obstacles();
+Highscore hs = new Highscore(); 
 
+IntList HighScores = new IntList(5); 
+
+boolean check = true;
+
+Table t  = new Table();
 int w = 1258;
 int w2 = 142;
 
@@ -28,10 +40,30 @@ int liv = 3;
 
 int point = 0;
 
+
+// SÆT CHECK TIL TRUE NÅR VI RESTARTER
 void setup() {
   size(1600, 900);
   frameRate(60);
   pic.loadBilleder();
+  
+  File fil = dataFile("new.csv"); 
+
+String filepath = fil.getPath();
+boolean exist = fil.isFile();
+
+
+  
+println(filepath,exist);
+  
+  if (exist) {
+    t = hs.loadCSV(t);
+    println("theo hee fortnite");
+  } else {
+    hs.lavCSV();
+  }
+  
+  hs.forberedHighScore();
 }
 
 void draw() {
@@ -48,7 +80,8 @@ void draw() {
   }
 
   if (scene == 2) {
-    m.regler();
+    //m.regler();
+    m.visHighScore();
     if (mousePressed) {
       m.tilbageKnap();
     }
@@ -60,6 +93,10 @@ void draw() {
 
   if (scene == 4) {
     wl.win();
+    if (check) {
+      hs.saveCSV(t);
+      check = false;
+    }
   }
   //Debug
   Debug.Debug();

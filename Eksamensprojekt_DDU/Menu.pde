@@ -69,4 +69,15 @@ class Menu {
       text("<", 20, 44);
       fill(255);
     }
-  }
+    
+    void visHighScore(){
+  
+     HighScores.sortReverse();
+     for(int i = 0; i< HighScores.size(); i++){
+    text(HighScores.get(i),40,40*(i+1));
+    if(i>=4){
+    break;
+    }
+     }
+    }
+}

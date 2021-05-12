@@ -23,6 +23,7 @@ class Fjender {
       if (s.xPos+100 >= fjenderXpos /*50 er bredde*/ && s.xPos+100 <= fjenderXpos+100 && s.yPos+100 >= fjenderYpos-79 && s.yPos+100 <= fjenderYpos+10) {
         println("Fjende Ramt");
         point -= 100;
+        scene = 4;
         liv = liv - 1;
         visFjende = false;
       }
