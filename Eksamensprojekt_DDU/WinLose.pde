@@ -18,7 +18,7 @@ class WinLose {
     textAlign(CENTER);
     fill(0);
     textSize(64);
-    text("Tillykke du betod \nGymnasiet", 800, 200);
+    text("Tillykke du bestod \nGymnasiet", 800, 200);
     textAlign(LEFT);
 
     //Knapper
