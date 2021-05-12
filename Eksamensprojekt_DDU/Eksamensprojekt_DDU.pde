@@ -1,4 +1,4 @@
-import java.util.*; //<>// //<>// //<>//
+import java.util.*; //<>// //<>// //<>// //<>//
 
 Background b = new Background(); //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 Billeder pic = new Billeder(); 
@@ -143,8 +143,8 @@ void level() {
   //Obstacles
   o.visObstacle();
   o.collideObstacle();
-
-
+  wl.molstreg();
+ 
   //indsæt spilleren
   s.tegnSpiller();
   s.bevagSpiller();
@@ -176,7 +176,7 @@ void level() {
   if (mousePressed) {
     m.tilbageKnap();
   }
-  wl.molstreg();
+ 
 }
 
 void keyPressed() {

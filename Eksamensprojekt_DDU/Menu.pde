@@ -99,7 +99,7 @@ class Menu {
     HighScores.sortReverse();
     for (int i = 0; i< HighScores.size(); i++) {
       text(HighScores.get(i), 780, 400+(i*50));
-      text("point \npoint \npoint \npoint \npoint",860,395);
+      text("point \npoint \npoint \npoint \npoint",870,400);
       if (i>=4) {
         break;
       }

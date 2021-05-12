@@ -5,9 +5,9 @@ class WinLose {
 
 void molstreg(){
   if(samletCollect == 3){
-  image(pic.SkoleOpen,8500 + b.screenMover,260);
+  image(pic.SkoleOpen,8500 + b.screenMover,290);
   }else{
-   image(pic.SkoleLukket,8500 + b.screenMover,260);
+   image(pic.SkoleLukket,8500 + b.screenMover,290);
   }
 
 if(s.xPos >= 8750+ b.screenMover && samletCollect == 3){
@@ -33,10 +33,13 @@ image(pic.SkoleSkilt,8450+b.screenMover,520);
     textAlign(CENTER);
     fill(0);
     textSize(64);
-    text("Tillykke du bestod \nGymnasiet", 800, 200);
-    textAlign(LEFT);
-    fill(255);
-    
+    text("Tillykke du bestod \nGymnasiet", 800, 150);
+   
+
+    text(point+"point", 780, 360);
+     textAlign(LEFT);
+       
+       fill(255);
     //HIGHSCORE TAVLE
     image(pic.BoardWin, 1300, 75);
     textSize(25);
