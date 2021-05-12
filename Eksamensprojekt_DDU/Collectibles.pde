@@ -19,7 +19,7 @@ class Collectibles {
     collectXpos1 = b.screenMover + 925;
     collectYpos1 = 400;
     if (visCollect1) {
-      image(pic.lektier,collectXpos1-50, collectYpos1-50);
+      image(pic.lektier, collectXpos1-50, collectYpos1-50);
       //ellipse(collectXpos1, collectYpos1, 100, 100);
     }
 
@@ -27,7 +27,7 @@ class Collectibles {
     collectXpos2 = b.screenMover + 4000;
     collectYpos2 = 650;
     if (visCollect2) {
-      image(pic.lektier,collectXpos2-50, collectYpos2-50);
+      image(pic.lektier, collectXpos2-50, collectYpos2-50);
       //ellipse(collectXpos2, collectYpos2, 100, 100);
     }
 
@@ -35,7 +35,7 @@ class Collectibles {
     collectXpos3 = b.screenMover + 6000;
     collectYpos3 = 650;
     if (visCollect3) {
-      image(pic.lektier,collectXpos3-50, collectYpos3-50);
+      image(pic.lektier, collectXpos3-50, collectYpos3-50);
       //ellipse(collectXpos3, collectYpos3, 100, 100);
     }
   }
@@ -50,7 +50,7 @@ class Collectibles {
       }
       visCollect1 = false;
     }
-    
+
     //Collect 2
     if (s.xPos+100 >= collectXpos2-50 && s.xPos+100 <= collectXpos2+50 && s.yPos >= collectYpos2-200 && collectFaaet2 == false) {
       collectFaaet2 = true;
@@ -60,7 +60,7 @@ class Collectibles {
       }
       visCollect2 = false;
     }
-    
+
     //Collect 3
     if (s.xPos+100 >= collectXpos3-50 && s.xPos+100 <= collectXpos3+50 && s.yPos >= collectYpos3-200 && collectFaaet3 == false) {
       collectFaaet3 = true;

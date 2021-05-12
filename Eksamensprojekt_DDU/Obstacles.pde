@@ -22,14 +22,14 @@ class Obstacles {
       tyndekraftStartPos = obstacleYPosStillads-200;
       println("Obstacle ramt");
     } else
-    //Bus
-    if (s.xPos+100 >= obstacleXPosBus+50 && s.xPos+100 <= obstacleXPosBus+400 && s.yPos+160 >= obstacleYPosBus && s.yPos+150 <= obstacleYPosBus) {
-      tyndekraftStartPos = obstacleYPosBus-160;
-      println("Stå på bus");
-    } else {
-      //Nulstiller tyndekraft.
-      tyndekraftStartPos = 550;
-    }
+      //Bus
+      if (s.xPos+100 >= obstacleXPosBus+50 && s.xPos+100 <= obstacleXPosBus+400 && s.yPos+160 >= obstacleYPosBus && s.yPos+150 <= obstacleYPosBus) {
+        tyndekraftStartPos = obstacleYPosBus-160;
+        println("Stå på bus");
+      } else {
+        //Nulstiller tyndekraft.
+        tyndekraftStartPos = 550;
+      }
 
     //Ikke igennem Bus
     if (s.xPos >= obstacleXPosBus-70 && s.xPos <= obstacleXPosBus+150 && s.yPos+150 >= obstacleYPosBus && s.yPos-100 <= obstacleYPosBus) {

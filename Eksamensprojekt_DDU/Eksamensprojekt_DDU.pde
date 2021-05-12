@@ -68,19 +68,20 @@ void level() {
   noStroke();
   fill(112, 82, 0);
   b.tegnbaggrund();
-  
+
   //Collectibles
   text(samletCollect + "/3", 100, 50);
-  image(pic.lektier,160,25,30,30);
-  
+  image(pic.lektier, 160, 25, 30, 30);
+
   //Liv
   text(liv + "/3", 100, 100);
-  image(pic.liv,160,75);
+  image(pic.liv, 160, 75);
   //Point
   textAlign(CENTER);
-  text(point, 800, 90);
+  textSize(50);
+  text(point, 800, 60);
   textAlign(LEFT);
-  
+
   //Fjender
   f.tegnFjender();
   f.collideFjender();

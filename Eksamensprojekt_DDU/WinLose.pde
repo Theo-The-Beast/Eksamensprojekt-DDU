@@ -54,22 +54,22 @@ class WinLose {
   void lose() {
     //Background
     image(pic.WB, 0, 0);
-    
+
     //Triste Mario
     image(pic.TristeMario, 590, 380);
-     
-     //Anders og john
+
+    //Anders og john
     image(pic.SurJohn, 400, 550);
     image(pic.SurAnders, 970, 550);
-    
-     //Tekst
+
+    //Tekst
     textAlign(CENTER);
     fill(0);
     textSize(64);
     text("Du er blevet taget i plagiat \n og er blevet bortvist ", 800, 100);
     textAlign(LEFT);
-    
-     //Knapper
+
+    //Knapper
     fill(255);
     rect(260, 780, 250, 100);
     rect(660, 780, 250, 100);
@@ -82,11 +82,10 @@ class WinLose {
     text("Main Menu", 700, 840);
     text("Quit", 1150, 840);
     fill(255);
-    
   }
 
   void loseKnap() {
-     //Prøv igen
+    //Prøv igen
     if (mouseX >=260 && mouseX <= 510 && mouseY >= 780 && mouseY <= 880) {
       scene = 1;
     }

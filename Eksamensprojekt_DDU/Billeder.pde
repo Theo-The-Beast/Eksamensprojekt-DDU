@@ -19,9 +19,16 @@ class Billeder {
   PImage TristeMario;
   PImage GladAnders;
   PImage GladJohn;
-   PImage SurAnders;
+  PImage SurAnders;
   PImage SurJohn;
   PImage liv;
+  PImage SkoleOpen;
+  PImage SkoleLukket;
+  PImage BilRod;
+  PImage BilLilla;
+  PImage BilPink;
+  PImage BilShrek;
+  
 
   void loadBilleder() {
     //Vores mand 
@@ -39,7 +46,7 @@ class Billeder {
     SurAnders = loadImage("SurAnders.png");
     SurJohn = loadImage("SurJohn.png");
     liv = loadImage("liv.png");
-    
+
     //Stier
     path = loadImage("path.png");
     path2 = loadImage("path2.png");
@@ -49,15 +56,21 @@ class Billeder {
     hus = loadImage("Hus.png");
     hotel = loadImage("hotel.png");
     church = loadImage("church.png");
+    SkoleOpen = loadImage("SkoleOpen.png");
+    SkoleLukket = loadImage("SkoleLukket.png");
 
     //Fjende
     teacher = loadImage("Teacher.png");
 
     //Collectibles
     lektier = loadImage("Lektier.png");
-    
+
     //Obstacles
     stillads = loadImage("stillads.png");
     bus = loadImage("bus.png");
+    BilRod = loadImage("BilRod.png");
+    BilLilla = loadImage("BilLilla.png");
+    BilPink = loadImage("BilPink.png");
+    BilShrek = loadImage("BilShrek.png");
   }
 }
