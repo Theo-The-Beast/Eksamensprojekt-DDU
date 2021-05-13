@@ -145,7 +145,7 @@ void level() {
   //println("CollectXpos1: "+ c.collectXpos1);
   //println("CollectXpos2: "+ c.collectXpos2);
   //println("CollectXpos3: "+ c.collectXpos3);
-  //println("xpos " + s.xPos);
+  println("xpos " + s.xPos);
   //println("Collect xPos " + c.collectXpos);
   //println("ypos " + s.yPos);
   //println("Collect yPos " + c.collectYpos);
