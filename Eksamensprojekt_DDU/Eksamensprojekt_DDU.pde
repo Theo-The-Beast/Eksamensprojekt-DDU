@@ -145,7 +145,7 @@ void level() {
   //println("CollectXpos1: "+ c.collectXpos1);
   //println("CollectXpos2: "+ c.collectXpos2);
   //println("CollectXpos3: "+ c.collectXpos3);
-  println("xpos " + s.xPos);
+  //println("xpos " + s.xPos);
   //println("Collect xPos " + c.collectXpos);
   //println("ypos " + s.yPos);
   //println("Collect yPos " + c.collectYpos);
@@ -157,7 +157,9 @@ void level() {
   //println(s.hoppe);
   //println("Fjende ypos: " + f.fjenderYpos);
   //println("StartXPos: " + s.startXPos);
-  print("ScreenMover " + b.screenMover);
+  //print("ScreenMover " + b.screenMover);
+  println("BaggrundRykker: " + b.baggrundRykker);
+  println("PersonRykkerHojer: " + b.personRykkerHojer);
 
   //Tilbage knap
   rect(20, 20, 30, 30);
@@ -265,7 +267,7 @@ void reset() {
   //Spiller
   s.xPos = s.startXPos;
   s.yPos = s.startYPos;
-  
+
   //Baggrund
   b.screenMover = 0;
   b.kirkeX = 50;
@@ -275,8 +277,4 @@ void reset() {
   b.sky1X = 30;
   b.sky2X = 1030;
   b.sky3X = 1350;
-}
-
-void pause(){
-
 }

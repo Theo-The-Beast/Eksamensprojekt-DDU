@@ -56,7 +56,7 @@ class Menu {
     image(pic.Board, 0, 0);
     textAlign(CENTER);
     textSize(64);
-    text("Velkommen til XXX\n", 800, 150);
+    text("Velkommen til Plagiat Simulator 2021\n", 800, 150);
     textSize(32);
     text("Reglerne i Plagiat Simulator 2021 går ud på at du skal bestå gymnasiet\n uden at blive taget for plagiat. Det gør du ved at samle alle nørdernes opgaver \n og nå til skolen uden at få 3 advarsler, \n eller ryge i et fraværshul.", 800, 230);
     textSize(50);

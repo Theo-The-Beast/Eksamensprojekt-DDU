@@ -56,24 +56,24 @@ class Background {
         screenMover = screenMover - xSpeed;
         vejStribeMover = vejStribeMover - xSpeed;
       }
+    }
 
-      //Streger på vejen
-      for (int i = 0; i < 12; i++) {
-        //Vejstriber
-        rect(vejStribeMover + i * 150 - 1650, 740, 100, 20);
-      }
-      for (int i = 0; i < 12; i++) {
-        //Vejstriber
-        rect(vejStribeMover + i * 150, 740, 100, 20);
-      }
-      for (int i = 0; i < 12; i++) {
-        //Vejstriber
-        rect(vejStribeMover + i * 150 + 1650, 740, 100, 20);
-      }
+    //Streger på vejen
+    for (int i = 0; i < 12; i++) {
+      //Vejstriber
+      rect(vejStribeMover + i * 150 - 1650, 740, 100, 20);
+    }
+    for (int i = 0; i < 12; i++) {
+      //Vejstriber
+      rect(vejStribeMover + i * 150, 740, 100, 20);
+    }
+    for (int i = 0; i < 12; i++) {
+      //Vejstriber
+      rect(vejStribeMover + i * 150 + 1650, 740, 100, 20);
+    }
 
-      if (vejStribeMover < -1650 || vejStribeMover > 1650) {
-        vejStribeMover = 0;
-      }
+    if (vejStribeMover < -1650 || vejStribeMover > 1650) {
+      vejStribeMover = 0;
     }
     //Ekstra pynt
     /*image(pic.skull, 430 + stribeX, 820, 50, 50);

@@ -36,7 +36,7 @@ class Spiller {
     } else {
       b.personRykkerHojer = true;
     }
-    
+
     //Angiver hvornår baggrund skal bevæge sig.
     if (xPos < 150 && b.screenMover < 0) {
       b.baggrundRykker = true;
@@ -44,10 +44,11 @@ class Spiller {
     } else {
       b.personRykkerVenstre = true;
     }
-    
+
     //Ikke gå længere ved slut
-    if (xPos > 1250 && b.screenMover <= -7500){
-      xPos = xPos - 10;
+    if (xPos > 1250 && b.screenMover < -7500) {
+      b.baggrundRykker = false;
+      b.personRykkerHojer = false;
     }
   }
 
