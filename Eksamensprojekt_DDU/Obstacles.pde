@@ -62,7 +62,7 @@ class Obstacles {
     obstacleYPosHul1 = 700;
     fill(0);
     rect(obstacleXPosHul1, obstacleYPosHul1, 150, 200);
-    image(pic.HulSkilt,obstacleXPosHul1-50, obstacleYPosHul1-145);
+    image(pic.HulSkilt, obstacleXPosHul1-50, obstacleYPosHul1-145);
     fill(255);
 
     //Hul i jorden 2.
@@ -70,7 +70,7 @@ class Obstacles {
     obstacleYPosHul2 = 700;
     fill(0);
     rect(obstacleXPosHul2, obstacleYPosHul2, 150, 200);
-    image(pic.HulSkilt,obstacleXPosHul2-50, obstacleYPosHul2-145);
+    image(pic.HulSkilt, obstacleXPosHul2-50, obstacleYPosHul2-145);
     fill(255);
 
     //Hul i jorden 3.
@@ -78,7 +78,7 @@ class Obstacles {
     obstacleYPosHul3 = 700;
     fill(0);
     rect(obstacleXPosHul3, obstacleYPosHul3, 150, 200);
-   image(pic.HulSkilt,obstacleXPosHul3-50, obstacleYPosHul3-145);
+    image(pic.HulSkilt, obstacleXPosHul3-50, obstacleYPosHul3-145);
     fill(255);
 
     //Hul i jorden 4.
@@ -86,7 +86,7 @@ class Obstacles {
     obstacleYPosHul4 = 700;
     fill(0);
     rect(obstacleXPosHul4, obstacleYPosHul4, 150, 200);
-    image(pic.HulSkilt,obstacleXPosHul4-50, obstacleYPosHul4-145);
+    image(pic.HulSkilt, obstacleXPosHul4-50, obstacleYPosHul4-145);
     fill(255);
   }
 
@@ -203,9 +203,9 @@ class Obstacles {
     if (s.xPos+100 > obstacleXPosHul4-10 && s.xPos+100 <= obstacleXPosHul4+10 && s.yPos > 650-100) { 
       s.xPos = s.xPos + 10;
     }
-    
+
     //Slutter spillet når man rammer bunden af hullet.
-    if (s.yPos+50 >= height){
+    if (s.yPos+50 >= height) {
       scene = 6;
     }
   }

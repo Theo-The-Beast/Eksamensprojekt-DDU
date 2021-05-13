@@ -1,19 +1,19 @@
 class Spiller {
   int xPos;
   float yPos;
-  int w;
-  int h;
+  int startXPos;
+  float startYPos;
   float hop = 1.0;
 
   boolean left = false;
   boolean right = false;
   boolean hoppe = false;
 
-  Spiller(int tempX, int tempY, int tempW, int tempH) {
+  Spiller(int tempX, int tempY) {
     xPos = tempX;
     yPos = tempY;
-    w = tempW;
-    h = tempH;
+    startXPos = tempX;
+    startYPos = tempY;
   }
 
   void tegnSpiller() {

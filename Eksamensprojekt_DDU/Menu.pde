@@ -28,6 +28,7 @@ class Menu {
   void menuKlik() {
     //Start spil
     if (mouseX >=675 && mouseX <= 925 && mouseY >= 330 && mouseY <= 430) {
+      reset();
       scene = 1;
     }
     //Regler
@@ -66,9 +67,9 @@ class Menu {
     text("= Opgaver... Du skal samle 3 af disse for at vinde", 800, 450);
     image(pic.liv, 460, 530, 80, 80);
     text("= Advarsler... Hvis du får 3 advarsler har du tabt", 795, 580);
-    image(pic.HulSkilt,475,630,50,90);
+    image(pic.HulSkilt, 475, 630, 50, 90);
     text("= Fraværshul... Falder du i et fraværshul har du tabt", 810, 660);
-    
+
     textSize(32);
     textAlign(LEFT);
 
@@ -99,7 +100,7 @@ class Menu {
     HighScores.sortReverse();
     for (int i = 0; i< HighScores.size(); i++) {
       text(HighScores.get(i), 780, 400+(i*50));
-      text("point \npoint \npoint \npoint \npoint",870,400);
+      text("point \npoint \npoint \npoint \npoint", 870, 400);
       if (i>=4) {
         break;
       }

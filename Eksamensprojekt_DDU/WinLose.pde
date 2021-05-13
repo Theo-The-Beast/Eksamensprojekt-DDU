@@ -1,22 +1,18 @@
 class WinLose {
-  //booleans
-  boolean win;
-  boolean lose;
 
-void molstreg(){
-  if(samletCollect == 3){
-  image(pic.SkoleOpen,8500 + b.screenMover,290);
-  }else{
-   image(pic.SkoleLukket,8500 + b.screenMover,290);
+  void molstreg() {
+    if (samletCollect == 3) {
+      image(pic.SkoleOpen, 8500 + b.screenMover, 290);
+    } else {
+      image(pic.SkoleLukket, 8500 + b.screenMover, 290);
+    }
+
+    if (s.xPos >= 8750+ b.screenMover && samletCollect == 3) {
+      scene = 4;
+    }
+
+    image(pic.SkoleSkilt, 8450+b.screenMover, 520);
   }
-
-if(s.xPos >= 8750+ b.screenMover && samletCollect == 3){
-scene = 4;
-}
-
-image(pic.SkoleSkilt,8450+b.screenMover,520);
-
-}
 
   void win() {
     //Background
@@ -34,16 +30,16 @@ image(pic.SkoleSkilt,8450+b.screenMover,520);
     fill(0);
     textSize(64);
     text("Tillykke du bestod \nGymnasiet", 800, 150);
-   
+
 
     text(point+"point", 780, 360);
-     textAlign(LEFT);
-       
-       fill(255);
+    textAlign(LEFT);
+
+    fill(255);
     //HIGHSCORE TAVLE
     image(pic.BoardWin, 1300, 75);
     textSize(25);
-    text("HIGH SCORES",1320,110);
+    text("HIGH SCORES", 1320, 110);
     text("1. \n2. \n3. \n4. \n5. ", 1340, 185);
     textSize(18);
     HighScores.sortReverse();
@@ -72,6 +68,7 @@ image(pic.SkoleSkilt,8450+b.screenMover,520);
   void winKnap() {
     //Prøv igen
     if (mouseX >=260 && mouseX <= 510 && mouseY >= 780 && mouseY <= 880) {
+      reset();
       scene = 1;
     }
     // Main menu
@@ -120,6 +117,7 @@ image(pic.SkoleSkilt,8450+b.screenMover,520);
   void loseKnap() {
     //Prøv igen
     if (mouseX >=260 && mouseX <= 510 && mouseY >= 780 && mouseY <= 880) {
+      reset();
       scene = 1;
     }
     // Main menu
@@ -131,8 +129,8 @@ image(pic.SkoleSkilt,8450+b.screenMover,520);
       exit();
     }
   }
-   
-   void loseTilHul() {
+
+  void loseTilHul() {
     //Background
     image(pic.WB, 0, 0);
 

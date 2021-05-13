@@ -10,14 +10,13 @@ class Background {
   int vejStribeMover;
 
   int kirkeX = 50;
+  int kirkeY = 413;
   int husX = 1030;
   int hotelX = 510;
   int treeX = 1850;
   int sky1X = 30;
   int sky2X = 1030;
   int sky3X = 1350;
-
-
 
   void tegnbaggrund() {
     //BLÅ HIMMEL!!!
@@ -106,6 +105,7 @@ class Background {
       kirkeX = width+30;
     }
 
+
     if (kirkeX > width+32) {
       kirkeX = -550;
     }
@@ -164,8 +164,8 @@ class Background {
     }
 
     //Kirke Drawing
-    image(pic.path3, kirkeX + 95, 413);
-    image(pic.church, kirkeX, 101);
+    image(pic.path3, kirkeX + 95, kirkeY);
+    image(pic.church, kirkeX, kirkeY-312);
 
     //Hus Drawing
     image(pic.path, husX -10, 473);
@@ -186,5 +186,12 @@ class Background {
 
     //Sky3 Drawing
     image(pic.cloud, sky3X, 30);
+
+    //Fjern Kirke bag skole
+    if (screenMover < -7000) {
+      kirkeY = height+350;
+    } else {
+      kirkeY = 413;
+    }
   }
 }

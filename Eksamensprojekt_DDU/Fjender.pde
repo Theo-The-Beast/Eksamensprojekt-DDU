@@ -15,15 +15,15 @@ class Fjender {
   boolean visFjende3 = true;
   boolean visFjende4 = true;
   boolean visFjende5 = true;
-  
+
   boolean mistLivBool = true;
 
   void tegnFjender() {
-    
+
     if (liv == 0) {
       scene = 3;
     }
-    
+
     // Fjende 1
     fjenderXpos1 = 1600 + b.screenMover;
     fjenderYpos1 = 650;
@@ -39,7 +39,7 @@ class Fjender {
       image(pic.teacher, fjenderXpos2, fjenderYpos2);
       //rect(fjenderXpos, fjenderYpos, 100, 100);
     }
-    
+
     // Fjende 3
     fjenderXpos3 = 5810 + b.screenMover;
     fjenderYpos3 = 650;
@@ -47,7 +47,7 @@ class Fjender {
       image(pic.teacher, fjenderXpos3, fjenderYpos3);
       //rect(fjenderXpos, fjenderYpos, 100, 100);
     }
-    
+
     // Fjende 4
     fjenderXpos4 = 7110 + b.screenMover;
     fjenderYpos4 = 650;
@@ -55,7 +55,7 @@ class Fjender {
       image(pic.teacher, fjenderXpos4, fjenderYpos4);
       //rect(fjenderXpos, fjenderYpos, 100, 100);
     }
-    
+
     // Fjende 5
     fjenderXpos5 = 8100 + b.screenMover;
     fjenderYpos5 = 650;
@@ -75,8 +75,8 @@ class Fjender {
         visFjende = false;
       }
     }
-     
-     // COLLIDE FJENDE 2
+
+    // COLLIDE FJENDE 2
     if (visFjende2) {
       if (s.xPos+100 >= fjenderXpos2 /*50 er bredde*/ && s.xPos+100 <= fjenderXpos2+100 && s.yPos+100 >= fjenderYpos2-79 && s.yPos+100 <= fjenderYpos2+10) {
         println("Fjende Ramt");
@@ -85,7 +85,7 @@ class Fjender {
         visFjende2 = false;
       }
     }
-    
+
     // COLLIDE FJENDE 3
     if (visFjende3) {
       if (s.xPos+100 >= fjenderXpos3 /*50 er bredde*/ && s.xPos+100 <= fjenderXpos3+100 && s.yPos+100 >= fjenderYpos3-79 && s.yPos+100 <= fjenderYpos3+10) {
@@ -95,7 +95,7 @@ class Fjender {
         visFjende3 = false;
       }
     }
-    
+
     // COLLIDE FJENDE 4
     if (visFjende4) {
       if (s.xPos+100 >= fjenderXpos4 /*50 er bredde*/ && s.xPos+100 <= fjenderXpos4+100 && s.yPos+100 >= fjenderYpos4-79 && s.yPos+100 <= fjenderYpos4+10) {
@@ -105,8 +105,8 @@ class Fjender {
         visFjende4 = false;
       }
     }
-    
-     // COLLIDE FJENDE 5
+
+    // COLLIDE FJENDE 5
     if (visFjende5) {
       if (s.xPos+100 >= fjenderXpos5 /*50 er bredde*/ && s.xPos+100 <= fjenderXpos5+100 && s.yPos+100 >= fjenderYpos5-79 && s.yPos+100 <= fjenderYpos5+10) {
         println("Fjende Ramt");
@@ -126,7 +126,7 @@ class Fjender {
         point += 100;
       }
     }
-    
+
     // KILL FJENDE 2
     if (visFjende2) {
       if (s.xPos+100 >= fjenderXpos2 /*50 er bredde*/ && s.xPos+100 <= fjenderXpos2+100 && s.yPos+100 >= fjenderYpos2-100 && s.yPos+100 <= fjenderYpos2-80) {
@@ -135,7 +135,7 @@ class Fjender {
         point += 100;
       }
     }
-    
+
     // KILL FJENDE 2
     if (visFjende3) {
       if (s.xPos+100 >= fjenderXpos3/*50 er bredde*/ && s.xPos+100 <= fjenderXpos3+100 && s.yPos+100 >= fjenderYpos3-100 && s.yPos+100 <= fjenderYpos3-80) {
@@ -144,8 +144,8 @@ class Fjender {
         point += 100;
       }
     }
-     
-     // KILL FJENDE 4
+
+    // KILL FJENDE 4
     if (visFjende4) {
       if (s.xPos+100 >= fjenderXpos4/*50 er bredde*/ && s.xPos+100 <= fjenderXpos4+100 && s.yPos+100 >= fjenderYpos4-100 && s.yPos+100 <= fjenderYpos4-80) {
         println("Kill Fjende");
@@ -153,7 +153,7 @@ class Fjender {
         point += 100;
       }
     }
-   
+
     // KILL FJENDE 5
     if (visFjende5) {
       if (s.xPos+100 >= fjenderXpos5/*50 er bredde*/ && s.xPos+100 <= fjenderXpos5+100 && s.yPos+100 >= fjenderYpos5-100 && s.yPos+100 <= fjenderYpos5-80) {

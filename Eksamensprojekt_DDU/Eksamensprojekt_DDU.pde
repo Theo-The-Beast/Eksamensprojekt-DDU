@@ -2,7 +2,7 @@ Background b = new Background(); //<>// //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
-Spiller s = new Spiller(400, 550, 100, 100);
+Spiller s = new Spiller(400, 550);
 Collectibles c = new Collectibles();
 WinLose wl = new WinLose();
 Menu m = new Menu();
@@ -68,10 +68,6 @@ void draw() {
 
   if (scene == 2) {
     m.regler();
-
-    if (mousePressed) {
-      m.tilbageKnap();
-    }
   }
 
   if (scene == 3) {
@@ -88,12 +84,8 @@ void draw() {
   }
   if (scene == 5) {
     m.visHighScore();
-
-    if (mousePressed) {
-      m.tilbageKnap();
-    }
   }
-   if (scene == 6) {
+  if (scene == 6) {
     wl.loseTilHul();
   }
   //Debug
@@ -142,7 +134,7 @@ void level() {
   o.visObstacle();
   o.collideObstacle();
   wl.molstreg();
- 
+
   //indsæt spilleren
   s.tegnSpiller();
   s.bevagSpiller();
@@ -164,6 +156,8 @@ void level() {
   //println("tyndekraftStartPos " + tyndekraftStartPos);
   //println(s.hoppe);
   //println("Fjende ypos: " + f.fjenderYpos);
+  //println("StartXPos: " + s.startXPos);
+  print("ScreenMover " + b.screenMover);
 
   //Tilbage knap
   rect(20, 20, 30, 30);
@@ -171,10 +165,6 @@ void level() {
   rect(28, 22, 4, 26);
   rect(38, 22, 4, 26);
   fill(255);
-  if (mousePressed) {
-    m.tilbageKnap();
-  }
- 
 }
 
 void keyPressed() {
@@ -191,12 +181,17 @@ void mouseClicked() {
   if (scene == 0) {
     m.menuKlik();
   } else if (scene == 1) {
+    m.tilbageKnap(); //Lav pause knap
   } else if (scene == 2) {
+    m.tilbageKnap();
   } else if (scene == 3) {
     wl.loseKnap();
   } else if (scene == 4) {
     wl.winKnap();
   } else if (scene == 5) {
+    m.tilbageKnap();
+  } else if (scene == 6) {
+    wl.loseKnap();
   }
 }
 
@@ -239,4 +234,49 @@ void timer() {
   fill(118, 118, 118);
   text(visTid, 1500, 75);
   fill(255);
+}
+
+void reset() {
+  //Liv
+  liv = 3;
+
+  //Point
+  point = 0;
+
+  //Tid
+  time = 0;
+
+  //Collect
+  samletCollect = 0;
+  c.visCollect1 = true;
+  c.collectFaaet1 = false;
+  c.visCollect2 = true;
+  c.collectFaaet2 = false;
+  c.visCollect3 = true;
+  c.collectFaaet3 = false;
+
+  //Fjende
+  f.visFjende = true;
+  f.visFjende2 = true;
+  f.visFjende3 = true;
+  f.visFjende4 = true;
+  f.visFjende5 = true;
+
+  //Spiller
+  s.xPos = s.startXPos;
+  s.yPos = s.startYPos;
+  
+  //Baggrund
+  b.screenMover = 0;
+  b.kirkeX = 50;
+  b.husX = 1030;
+  b.hotelX = 510;
+  b.treeX = 1850;
+  b.sky1X = 30;
+  b.sky2X = 1030;
+  b.sky3X = 1350;
+}
+
+void pause(){
+
 }

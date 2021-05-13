@@ -32,7 +32,7 @@ class Billeder {
   PImage BoardWin;
   PImage SkoleSkilt;
   PImage HulSkilt;
-  
+
 
   void loadBilleder() {
     //Vores mand 
