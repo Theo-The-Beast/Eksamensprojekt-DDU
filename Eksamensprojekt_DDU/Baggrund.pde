@@ -19,7 +19,6 @@ class Background {
   int sky3X = 1350;
 
   void tegnbaggrund() {
-    //BLÅ HIMMEL!!!
     for ( int i = 0; i < width; i++) {
       stroke(map(i, 50, width, 0, 200), 0, 255-map(i, 0, width, 0, 0));
       line(0, i, width, i);
@@ -75,9 +74,6 @@ class Background {
     if (vejStribeMover < -1650 || vejStribeMover > 1650) {
       vejStribeMover = 0;
     }
-    //Ekstra pynt
-    /*image(pic.skull, 430 + stribeX, 820, 50, 50);
-     */
 
     if (baggrundRykker) {
       //Ændre xSpeed når boolean bliver true eller false
@@ -104,7 +100,6 @@ class Background {
     if (kirkeX < -550) {
       kirkeX = width+30;
     }
-
 
     if (kirkeX > width+32) {
       kirkeX = -550;

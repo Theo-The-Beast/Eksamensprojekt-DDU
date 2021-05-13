@@ -1,4 +1,4 @@
-Background b = new Background(); //<>// //<>//
+Background b = new Background(); //<>//
 Billeder pic = new Billeder(); 
 Fjender f = new Fjender();
 Debug Debug = new Debug();
@@ -57,7 +57,6 @@ void draw() {
   clear();
   vaegge();
   tyndekraft();
-  //println(scene);
   if (scene==0) {
     m.display();
   }
@@ -103,7 +102,6 @@ void level() {
 
   //Collectibles
   fill(155, 155, 155);
-  //ellipse(142,67, 130,130);
   fill(118, 118, 118);
   text(samletCollect + "/3", 100, 50);
   image(pic.lektier, 160, 25, 30, 30);
@@ -115,7 +113,6 @@ void level() {
   textAlign(CENTER);
   textSize(50);
   fill(118, 118, 118);
-  //ellipse(800,45,150,70);
   fill(155, 155, 155);
   text(point, 800, 60);
   textAlign(LEFT);
@@ -140,26 +137,8 @@ void level() {
   s.bevagSpiller();
   s.maksHopHoejde();
 
+  //Timer
   timer();
-  //println(f.collideFjende);
-  //println("CollectXpos1: "+ c.collectXpos1);
-  //println("CollectXpos2: "+ c.collectXpos2);
-  //println("CollectXpos3: "+ c.collectXpos3);
-  //println("xpos " + s.xPos);
-  //println("Collect xPos " + c.collectXpos);
-  //println("ypos " + s.yPos);
-  //println("Collect yPos " + c.collectYpos);
-  //println(c.collectFaaet);
-  //println("Ob ypos " + o.obstacleYPos);
-  //println("stribex " + b.stribeX);
-  //println("tyndekraft " + tyndekraft);
-  //println("tyndekraftStartPos " + tyndekraftStartPos);
-  //println(s.hoppe);
-  //println("Fjende ypos: " + f.fjenderYpos);
-  //println("StartXPos: " + s.startXPos);
-  //print("ScreenMover " + b.screenMover);
-  println("BaggrundRykker: " + b.baggrundRykker);
-  println("PersonRykkerHojer: " + b.personRykkerHojer);
 
   //Tilbage knap
   rect(20, 20, 30, 30);
@@ -183,7 +162,7 @@ void mouseClicked() {
   if (scene == 0) {
     m.menuKlik();
   } else if (scene == 1) {
-    m.tilbageKnap(); //Lav pause knap
+    m.tilbageKnap();
   } else if (scene == 2) {
     m.tilbageKnap();
   } else if (scene == 3) {
@@ -232,7 +211,6 @@ void timer() {
   }
   textSize(32);
   fill(155, 155, 155);
-  // ellipse(1529,65,80,50);
   fill(118, 118, 118);
   text(visTid, 1500, 75);
   fill(255);

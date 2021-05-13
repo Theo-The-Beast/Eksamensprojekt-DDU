@@ -16,7 +16,6 @@ class Highscore {
 
   void saveCSV(Table t) {
     t.addRow();
-    println(t.getRowCount());
     t.setInt(t.getRowCount()-1, "HighScore", point);
 
     saveTable(t, "data/new.csv");
@@ -34,10 +33,8 @@ class Highscore {
 
   void endeligScore() {
     if (endeligPointBool) {
-      println("time: "+visTid);
       point += visTid*2;
       endeligPointBool = false;
-      println(point);
     }
   }
 }

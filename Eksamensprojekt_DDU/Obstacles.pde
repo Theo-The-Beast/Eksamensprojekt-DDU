@@ -42,7 +42,7 @@ class Obstacles {
     obstacleYPosBilRod = 620;
     image(pic.BilRod, obstacleXPosBilRod, obstacleYPosBilRod);
 
-    // Lilla Bil
+    //Lilla Bil
     obstacleXPosBilLilla = 5000 + b.screenMover;
     obstacleYPosBilLilla = 620;
     image(pic.BilLilla, obstacleXPosBilLilla, obstacleYPosBilLilla);

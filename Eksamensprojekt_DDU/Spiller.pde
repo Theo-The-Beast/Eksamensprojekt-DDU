@@ -18,7 +18,6 @@ class Spiller {
 
   void tegnSpiller() {
     fill(255);
-    //rect(xPos+73, yPos+35, 55, 165);
     yPos = yPos * hop + tyndekraft;
     image(pic.mario, xPos, yPos+5, 200, 200);
   }
@@ -65,14 +64,12 @@ class Spiller {
 
   void spillerHopPress() {
     if (keyCode == UP && hoppe == false && yPos >= tyndekraftStartPos || keyCode == 32 && hoppe == false && yPos >= tyndekraftStartPos) {
-      println("Hoppe Aktiv");
       hoppe = true;
     }
   }
 
   void spillerHopRelease() {
     if (keyCode == UP && hoppe == true || keyCode == 32 && hoppe == true) {
-      println("Hoppe ikke Aktiv");
       hoppe = false;
     }
   }

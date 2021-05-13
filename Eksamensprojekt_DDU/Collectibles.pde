@@ -20,7 +20,6 @@ class Collectibles {
     collectYpos1 = 400;
     if (visCollect1) {
       image(pic.lektier, collectXpos1-50, collectYpos1-50);
-      //ellipse(collectXpos1, collectYpos1, 100, 100);
     }
 
     //Collect 2
@@ -28,7 +27,6 @@ class Collectibles {
     collectYpos2 = 230;
     if (visCollect2) {
       image(pic.lektier, collectXpos2-50, collectYpos2-50);
-      //ellipse(collectXpos2, collectYpos2, 100, 100);
     }
 
     //Collect 3
@@ -36,7 +34,6 @@ class Collectibles {
     collectYpos3 = 300;
     if (visCollect3) {
       image(pic.lektier, collectXpos3-50, collectYpos3-50);
-      //ellipse(collectXpos3, collectYpos3, 100, 100);
     }
   }
 
